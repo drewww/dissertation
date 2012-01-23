@@ -1,0 +1,14 @@
+# latex file stuff
+
+*.aux
+*.pdf
+*.out
+*.log
+*.synctex*
+*.bbl
+*.bbg
+*.blg
+*.toc
+*.idx
+*.lof
+*.lot
