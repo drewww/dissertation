@@ -1,0 +1,86 @@
+\documentclass{tufte-book}
+\hypersetup{colorlinks}
+
+\usepackage{amsmath}
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+\title{Hybrid Spaces: Adding New Communication Channels to Face-to-Face Interactions}
+\author[Drew Harry]{Drew Harry}
+% \publisher{}
+
+%\date{24 January 2009}  % if the \date{} command is left out, the current date will be used
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% Provides paragraphs of dummy text
+\usepackage{lipsum}
+
+% Provides rotated tables + table labels, which I might use.
+\usepackage{rotating}
+
+% some circles I need
+\usepackage{wasysym}
+
+\usepackage{multirow}
+
+%%
+% Prints argument within hanging parentheses (i.e., parentheses that take
+% up no horizontal space).  Useful in tabular environments.
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}}
+
+%%
+% Prints an asterisk that takes up no horizontal space.
+% Useful in tabular environments.
+\newcommand{\hangstar}{\makebox[0pt][l]{*}}
+
+%%
+% Prints a trailing space in a smart way.
+\usepackage{xspace}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+% Generates the index
+\usepackage{makeidx}
+\makeindex
+
+
+\begin{document}
+	
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+
+\backmatter
+
+\bibliography{dissertation}
+\bibliographystyle{plainnat}
+
+\end{document}
+
+
+
