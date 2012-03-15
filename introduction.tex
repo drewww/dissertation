@@ -13,6 +13,7 @@ Since computer-mediated-communication became technically viable, there has been 
 
 Outside of lab contexts, we are not assigned a specific tool for a specific task. Instead, we make nuanced and highly contextual choices about what sorts of tools to use in different communication situations. If we accepted the idea that ``being there'' was a primary motivation, we would expect to see people prioritizing tools that were the most like ``being there'' among the available options. This spectrum is also sometimes characterized as ``media richness'' per \citet{Daft:1986p1548}, in which the most rich media are those that are most like being face-to-face. Instead, researchers have found repeatedly that in non-lab situations, people frequently choose less rich media over more rich options. \citep{Scholl:2006p210} If richness alone does not predict people's real-life communication media selection decisions, it suggests that other features of a communication medium might also be relevant. 
 
+% there are many other takedowns of media richness theory. Could expand those here.
 % try to find some more people who find what scholl finds. I know there's lots but I don't have a handy list right now. 
 
 These features might include:
@@ -71,7 +72,7 @@ It is not, however, the only way to approach this problem. In their famous paper
 
 Although Hollan and Stornetta focus on creating mediated experiences that rival or surpass face-to-face experiences, I argue that there is another  strategy that deserves our attention. A certain amount of ``being there'' in the form of audio or video is tremendously valuable, as \citet{Ochsman:1974vu} described in their studies. My work focuses on the design of systems that \emph{complement} such experiences by attempting to provide the benefits of mediation in situations where either the users are actually physically co-located, or where they are using a traditional ``being there''-type technology (such as audio or video conferencing).
 
-This equivalence may seem unlikely; why should accept that systems used in coordination with audio or video conferencing would be similar to those used face-to-face? I will argue that a system that can effectively complement face-to-face interaction when its users could simply set it aside and rely on the (presumed superior) affordances of unfettered verbal communication likely has something to tell us about both design and face-to-face interaction more generally. If these systems can provide value in face-to-face contexts, I will show that they also provide value (perhaps even more value) when used to complement systems that seek to create experiences \emph{like} being face-to-face. Furthermore, true ``distributed'' situations are becoming less common. Heterogenous configurations where some people are co-located and others are remote and alone are becoming more common. In these contexts, a system that doesn't operate effectively between co-located users is unlikely to be broadly useful. Thinking broadly about systems that complement both face-to-face and audio/video sharing will more efficiently lead us to systems effective on both contexts than treating them as separate cases.
+This equivalence may seem unlikely; why should we accept that systems used in coordination with audio or video conferencing would be similar to those used face-to-face? I will argue that a system that can effectively complement face-to-face interaction when its users could simply set it aside and rely on the (presumed superior) affordances of unfettered verbal communication likely has something to tell us about both design and face-to-face interaction more generally. If these systems can provide value in face-to-face contexts, I will show that they also provide value (perhaps even more value) when used to complement systems that seek to create experiences \emph{like} being face-to-face. Furthermore, true ``distributed'' situations are becoming less common. Heterogenous configurations where some people are co-located and others are remote and alone are becoming more common. In these contexts, a system that doesn't operate effectively between co-located users is unlikely to be broadly useful. Thinking broadly about systems that complement both face-to-face and audio/video sharing will more efficiently lead us to systems effective on both contexts than treating them as separate cases.
 
 
 
@@ -82,11 +83,14 @@ This equivalence may seem unlikely; why should accept that systems used in coord
 % is this a second order effect?
 % For a variety of reasons, the power dynamics in social situations are more easily subverted in mediated environments. 
 
-In my work, I focus primarily on these cases --- contexts where there is a co-located and face-to-face component that serves as the primary communication channel for at least some of the users. To these contexts, I add new mediated communication channels. The goal of these interventions is to create environments where people have ways to express themselves non-verbally in addition to whatever existing communication channels exist. By adding mediated communication channels to other existing channels, we can focus on the affordances of each channel to let it do what it does best while addressing the short-comings of each.
+In my work, I focus on a series of ``primary'' contexts: virtual worlds, face-to-face panel discussions, small group seminar discussions, business meetings, remote information sessions, and live-event spectating and describe a system that can complement that ``primary'' experience in a way that enhances the overall experience. Metrics and evaluation strategies vary for each of these pieces, but each project shares a deep interest in trying to fill in the gaps of the ``primary'' interaction space by using the particular strengths of less ``rich'' mediated communication channels. The goal of these interventions is to create environments where people have ways to express themselves non-verbally in addition to whatever existing communication channels exist. By adding mediated communication channels to other existing channels, we can focus on the affordances of each channel to let it do what it does best while addressing the short-comings of each.
+
 
 % Part of what's attractive about mediated communication systems is that there is a tremendous variety of ways to design and use them once we set aside a desire to recreate face-to-face interaction. Although in this section I've contrasted mediated communication with face-to-face communication in a way that might imply that mediated communication systems are somehow monolithic and self-similar, the survey of related systems in the section to follow will illustrate the tremendous range of potential systems in this space and demonstrate how thoughtful designs can have widely varying impacts on the experience of communication or collaboration. 
 
-My work takes this general design strategy of adding new communication channels in a few different directions. In this proposal, I will describe my past work looking at meetings in virtual worlds, audience-speaker interaction in presentations, and classroom discussions. I will also lay out my design for a system to support face-to-face meetings with remote participants. These research contexts vary both in the numbers of simultaneous participants, as well as their geographic configuration. Over the course of my work, I have shifted my attention from configurations where all users are remote (\emph{Information Spaces}) to heterogeneous situations where some or all of the participants are co-located (\emph{backchan.nl}, \emph{Tin Can Classroom}, \emph{Tin Can Conference}). 
+% My work takes this general design strategy of adding new communication channels in a few different directions. In this proposal, I will describe my past work looking at meetings in virtual worlds, audience-speaker interaction in presentations, and classroom discussions. I will also lay out my design for a system to support face-to-face meetings with remote participants. These research contexts vary both in the numbers of simultaneous participants, as well as their geographic configuration. Over the course of my work, I have shifted my attention from configurations where all users are remote (\emph{Information Spaces}) to heterogeneous situations where some or all of the participants are co-located (\emph{backchan.nl}, \emph{Tin Can Classroom}, \emph{Tin Can Conference}). 
+
+% TODO Add a paragraph here that preludes some of the design as research ideas (which will be covered in more depth in their own section) as a way of saying that having these themes is part of what makes this research-worthy. 
 
 Across this set of projects, I explore three major research themes:
 
@@ -119,3 +123,14 @@ This work will contribute on two levels. First, by creating and deploying interf
 % talk about general themes + backchannels
 
 In this proposal, I will start with a survey of relevant related systems, as well as briefly touching on experimental, theoretical, and methodological work that plays a significant role in my work. Then I will describe the arc of my  work with a focus on my final project: Tin Can. Finally, I will describe in general terms the contributions and potential impact of this work.
+
+
+\section{Design Research/Methodology}
+
+I want to talk about this as an overall strategy, but not sure where exactly to put it. It doesn't really fit in the stages discussion (which will occupy most of chapter 2? or chapter 3?). Really, I think I need to take a step back on the intro and split it up a little more rigorously. Section ideas:
+
+ * Being There
+ * Complementing, Not Replacing
+ * Domains and Themes
+ * Design as Research
+ * Intro to Rest
