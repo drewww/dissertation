@@ -11,16 +11,28 @@ Since computer-mediated-communication became technically viable, there has been 
 
 % also cite the chapanis sci amer article? it's better and a little more broad
 
-Outside of lab contexts, we are not assigned a specific tool for a specific task. Instead, we make nuanced and highly contextual choices about what sorts of tools to use in different communication situations. If we accepted the idea that ``being there'' was a primary motivation, we would expect to see people prioritizing tools that were the most like ``being there'' among the available options. This spectrum is also sometimes characterized as ``media richness'' per \citet{Daft:1986p1548}, in which the most rich media are those that are most like being face-to-face. Instead, researchers have found repeatedly that in non-lab situations, people frequently choose less rich media over more rich options. \citep{Scholl:2006p210} If richness alone does not predict people's real-life communication media selection decisions, it suggests that other features of a communication medium might also be relevant.
+Outside of lab contexts, we are not assigned a specific tool for a specific task. Instead, we make nuanced and highly contextual choices about what sorts of tools to use in different communication situations. If we accepted the idea that ``being there'' was a primary motivation, we would expect to see people prioritizing tools that were the most like ``being there'' among the available options. This spectrum is also sometimes characterized as ``media richness'' per \citet{Daft:1986p1548}, in which the most rich media are those that are most like being face-to-face. Instead, researchers have found repeatedly that in non-lab situations, people frequently choose less rich media over more rich options. \citep{Scholl:2006p210} If richness alone does not predict people's real-life communication media selection decisions, it suggests that other features of a communication medium might also be relevant. 
 
 % try to find some more people who find what scholl finds. I know there's lots but I don't have a handy list right now. 
 
+These features might include:
+
+\begin{itemize}
+\item Archivability
+\item Mobility
+\item Revisability
+\item Emotional Content
+\item Synchronicity
+\item Interruptability
+\end{itemize}
+
+% Going to need to be more rigorous about this list at some point and find some references that support it and provide a bit more text about each item.
+
+Since in many contexts people choose non ``being there'' interfaces because of some of these factors, we can safely conclude that designing experiences that seek to be better than ``being there'' will likely take advantage of these sorts of design elements.
 
 
-The core of the argument that computer-mediated-communication should simply seek to recreate face-to-face interactions is the notion that face-to-face interaction is a kind of gold standard of human interaction. We cannot imagine an experience (technology-mediated or otherwise) that would measure up to an unmediated face-to-face experience.
-
-
-This blindness to the potential benefits of mediated communication systems hides the many challenges of face-to-face interaction. Might there be benefits to interactions that blend ``being there'' experiences (mediated or otherwise) and some sort of complementary interface that does not attempt to mimic face-to-face experiences? How might such an experience improve on face-to-face interactions alone? A closer inspection of face-to-face interaction reveals a number of potential ways we might improve on face-to-face interaction:
+% also link to facetime?
+The continued focus on ``being there'' designs by much of the communication industry, Cisco's Telepresence systems \ref{fig:cisco-telepresence} and Apple's Facetime \ref{fig:facetime} being major examples reveals a blindness to the potential benefits of mediated communication systems. Furthermore, a focus on this approach hides the many challenges of face-to-face interaction. While in one-on-one situations and very small groups it may be difficult to provide a better experience than face-to-face, I see a wide variety of challenges in interacting with groups that contain more than ten people.  A closer inspection of face-to-face interaction reveals a number of potential ways it might be improved:
 
 
 \begin{itemize}
@@ -46,7 +58,7 @@ This blindness to the potential benefits of mediated communication systems hides
 	\label{fig:cisco-telepresence}
 \end{marginfigure}
 
-Despite these challenges, there's still an undeniable magic to the pursuit of recreating face-to-face communication at a distance. This magic is most poetically captured in the famous ``Hole in Space'' \citep{HoleinSpace:1980vn} piece, visually and audibly connecting a storefront in Los Angeles and New York in a way that seemed to make distance disappear. This same magic continues to motivate modern communication tools from major companies; Cisco and Apple, among others, have played on this utopian vision of a future where distance is no barrier to communication in their commercials for so-called ``telepresence'' tools and mobile phones with cameras, respectively. This vision is not simply aspirational, either. Tools to communicate with physically distant people either with audio alone or with an added video connection play a role in the daily lives of millions of people. This desire to experience ``being there'' with someone else is powerful and compelling. 
+Despite these challenges, there's still an undeniable magic to the pursuit of recreating face-to-face communication at a distance. This magic is most poetically captured in the famous ``Hole in Space'' \citep{HoleinSpace:1980vn} piece, visually and audibly connecting a storefront in Los Angeles and New York in a way that seemed to make distance disappear. This vision is not simply aspirational, either. Tools to communicate with physically distant people either with audio alone or with an added video connection play a role in the daily lives of millions of people. This desire to experience ``being there'' with someone else is powerful and compelling. 
 
 
 \begin{marginfigure}
@@ -57,7 +69,9 @@ Despite these challenges, there's still an undeniable magic to the pursuit of re
 
 It is not, however, the only way to approach this problem. In their famous paper, \citet{Hollan:1992tz} suggest an alternative approach which they named ``beyond being there''. They argue that seeking to recreate the experience of ``being there'' was in a way an abdication of our responsibility as designers that left an important design space un-explored. In particular, they urge us to think less about ways to minimize the experience of mediation in communication, but to look instead for ways that mediation can add value to interactions. To take this perspective seriously, we need to shift away from a view of face-to-face interaction as being always better than interactions mediated by technology and instead think critically about potential limitations and challenges with face-to-face interaction and potential benefits that mediation can offer. 
 
-Although Hollan and Stornetta focus on creating mediated experiences that rival or surpass face-to-face experiences, I argue that there is another parallel strategy that deserves attention. The design techniques that support effective communication amongst groups of geographically remote groups might well be effective in supporting face-to-face groups as well. Indeed a system that can effectively complement face-to-face interaction when its users could simply set it aside and rely on the (presumed superior) affordances of unfettered verbal communication likely has something to tell us about both design and face-to-face interaction more generally. Furthermore, true ``distributed'' situations are becoming less common. Heterogenous configurations where some people are co-located and others are remote and alone are becoming more common. In these contexts, a system that doesn't operate effectively between co-located users is unlikely to be broadly useful.
+Although Hollan and Stornetta focus on creating mediated experiences that rival or surpass face-to-face experiences, I argue that there is another  strategy that deserves our attention. A certain amount of ``being there'' in the form of audio or video is tremendously valuable, as \citet{Ochsman:1974vu} described in their studies. My work focuses on the design of systems that \emph{complement} such experiences by attempting to provide the benefits of mediation in situations where either the users are actually physically co-located, or where they are using a traditional ``being there''-type technology (such as audio or video conferencing).
+
+This equivalence may seem unlikely; why should accept that systems used in coordination with audio or video conferencing would be similar to those used face-to-face? I will argue that a system that can effectively complement face-to-face interaction when its users could simply set it aside and rely on the (presumed superior) affordances of unfettered verbal communication likely has something to tell us about both design and face-to-face interaction more generally. If these systems can provide value in face-to-face contexts, I will show that they also provide value (perhaps even more value) when used to complement systems that seek to create experiences \emph{like} being face-to-face. Furthermore, true ``distributed'' situations are becoming less common. Heterogenous configurations where some people are co-located and others are remote and alone are becoming more common. In these contexts, a system that doesn't operate effectively between co-located users is unlikely to be broadly useful. Thinking broadly about systems that complement both face-to-face and audio/video sharing will more efficiently lead us to systems effective on both contexts than treating them as separate cases.
 
 
 
