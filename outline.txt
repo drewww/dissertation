@@ -1,0 +1,70 @@
+Introduction
+============
+Lay out the background for the work. Starts with a broad discussion of computer mediated communication and different past models for designing new systems. Introduces the being there / beyond being there argument, and places my work in an in-between case, where technology can be integrated into the being there experience, and better integrate remote participants in a beyond being there way. Sets up the benefits that text-based might theoretically have, and why it's attractive as a complimentary interaction modality. Describe the arc of the dissertation: a series of design contexts and systems adapted for that specific context. In each project, we look at a series of research themes (grounding, attention, and non-verbal actions).
+
+(started with the proposal version, and a second draft is basically content-complete, but needs editing)
+
+Background
+==========
+
+Design as Research
+------------------
+A discussion about what sorts of contributions design-as-research can make, and makes an argument for why this is a useful way to address the core research questions the thesis is tackling.
+
+(this is mostly written from one of my classes. might be a bit polemic and not relevant, but I'll leave it in for now)
+
+Methodology
+-----------
+
+An overview of my methodological perspective. Why it's appropriate for this work, it's weaknesses and strengths. Will also include a discussion of the major challenges of relying on in situ studies with real people doing real work. 
+
+Related Work
+------------
+
+The foundation of this will be from the proposal. I'll probably start with just that and then expand it in response to feedback and as I write other sections.
+
+(using proposal version for now)
+
+Virtual Worlds
+==============
+
+This chapter will reflect on my work in virtual worlds. It will introduce some key questions in the virtual world space in terms of the core research themes (e.g. what does attention mean in a virtual world? how do we think about attention in-world v. out of world? What actions can avatars take, and how does that influence design in a virtual world?) Portions of this chapter can come from my masters thesis, which addressed these issues at some length.
+
+Information Spaces
+------------------
+
+I'll start with the CHI paper on this project, and expand/direct it towards the research themes for the dissertation. This will be the bulk of the chapter.
+
+Presentation Spaces
+-------------------
+
+This won't be that long, but will discuss the work I did at Sun in the context of the research themes and how we sought to use attention to content as a social signal, plus spatial commenting as a non-verbal action. 
+
+
+Virtual Futures
+---------------
+
+Reflect on the period that virtual worlds had in the spotlight and what we should take away from that. Are virtual worlds dead? what should we learn from them? What are the core weaknesses that led to their decline? I'll probably reprise some of the arguments from the generals paper about voice in SL. 
+
+
+backchan.nl
+===========
+
+This will predominantly come from my CHI paper about backchannl. The one major exception will be a new section that reflects on continued usage of backchannl since the paper was published. I'll spend some time getting in touch with recent users of backchannl (particularly for unintended use cases like small classrooms) and figure out what's going on there. This will be pretty time consuming, though, and we should talk about how much of this will be useful.
+
+
+Tin Can
+=======
+
+This will predominantly be the CSCW paper about Tin Can. I'll augment that with some historical content about the original vision for meetings, and show screenshots of that version and discuss the differences. I might also muse on the difficulties of testing this sort of thing in a corporate context. But the core of it will be the CSCW paper.
+
+ROAR
+====
+
+This will be perhaps the only chapter with all entirely new content. I'll talk about the background for ROAR, describe how it represents an extension of the themes discussed in past chapters to very large scale audiences. I'll run through the prototypes and discuss how the design and vision evolved over time. To tie into the in-room experience, I'll describe how future versions of roar could involve the on-screen personalities and the experience in-stadium, too.
+
+
+Conclusion
+==========
+
+Close out the three research themes and the overall lessons. Try to draw some broad conclusions about how this work should guide future designers working in this space, and what exactly the contributions have been. 
