@@ -1,5 +1,78 @@
-\chapter{Related Work}
+\chapter{Background}
 
+%intro to the background section here
+
+
+
+
+
+% : virtual worlds, face-to-face panel discussions, small group seminar discussions, business meetings, remote information sessions, and live-event spectating
+
+% Part of what's attractive about mediated communication systems is that there is a tremendous variety of ways to design and use them once we set aside a desire to recreate face-to-face interaction. Although in this section I've contrasted mediated communication with face-to-face communication in a way that might imply that mediated communication systems are somehow monolithic and self-similar, the survey of related systems in the section to follow will illustrate the tremendous range of potential systems in this space and demonstrate how thoughtful designs can have widely varying impacts on the experience of communication or collaboration. 
+
+% My work takes this general design strategy of adding new communication channels in a few different directions. In this proposal, I will describe my past work looking at meetings in virtual worlds, audience-speaker interaction in presentations, and classroom discussions. I will also lay out my design for a system to support face-to-face meetings with remote participants. These research contexts vary both in the numbers of simultaneous participants, as well as their geographic configuration. Over the course of my work, I have shifted my attention from configurations where all users are remote (\emph{Information Spaces}) to heterogeneous situations where some or all of the participants are co-located (\emph{backchan.nl}, \emph{Tin Can Classroom}, \emph{Tin Can Conference}). 
+
+% TODO Add a paragraph here that preludes some of the design as research ideas (which will be covered in more depth in their own section) as a way of saying that having these themes is part of what makes this research-worthy. 
+
+\section{Design as Research}
+% there are a few points here. 
+% 1. a broad introduction to design as a valid research strategy
+% 2. projects I did, and the coverage of the space
+% 3. themes and theory
+
+Proposing a design space and arguing for its value as an approach to common problems is not, traditionally, the realm of academic research. It is a frequently taken-for-granted assumption at the Media Lab that designing novel technical systems is a natural and defensible way to do research, but outside of that context this may seem like an unusual way to conduct research. Given that this assumption is fundamental to this work, it seems productive to address this question from the start. Design as research is clearly being conducted in a variety of contexts using a variety of methods, yet there is very little discussion or agreement about the fundamental aspects of how that work is conducted and what we can learn from it, let alone a positive argument for why it might be the \emph{best} approach for certain kinds of research questions. It is frequently tolerated but not actively advocated for. 
+
+
+
+Because my research practice uses design and development as its primary research method, it seems productive to describe explicitly why this is a valuable research approach. I will describe the sorts of contributions one can make working this way and contrast this approach with other approaches dominant in the fields of human computer interaction, computer mediated communication, and computer supported cooperative work.
+
+% TODO This is a stupid title, especially relative to the section title. FIX IT.
+\subsection{Engineering as Research}
+
+% can I get away with these claims? if I wanted to be serious about it I would do a some lit review statistics. but I don't really want to get bogged down in that. Lets see if I can get away without it.
+It is a gross simplification, but let us separate work in these fields into three general categories: technology-enabled sociology and psychology, studies of systems in-the-wild, and design of new systems. In the first category, researchers seek to answer the kinds of questions typically of interest of sociologists and psychologists, but deploy technology to allow them to be answer questions have not been able to answer in sufficient detail in the past. This work focuses primarily (but not exclusively) on drawing conclusions about the behavior and experiences of either individuals or collections of people. Studies of systems in-the-wild are, in contrast, more focused on understanding the relationship between the technology and its use, often described as the socio-technical system. Finally, there are researchers who design and build novel systems and then study them. I describe this final category of researchers (in which I consider myself a member) researchers-as-designers. 
+
+These last two categories are deceptively similar. After building a novel system, does one simply run a study on that system like a researcher who didn't build the system themselves? This suggests a critical thought experiment: if the researcher-as-designer could simply imagine a system into existence that looked exactly like the system they wished to study, would that compromise the research in any fundamental way? Put another way, does the actual design and implementation process actually add value to the research or is it just an overhead?
+
+There are two ways to address this issue. First, the thought experiment is subtly mis-framed. Technical artifacts can never really be imagined into existence because their creation is a constant negotiation between the properties of the tools used to create it, the environment in which the design happens, and the reactions the designer has to their own work. In practice, the artifact that comes out of a design process is the result of a lengthy iterative process, even in design processes that don't conceive of themselves as iterative. Simply creating part of an artifact and integrating into another part causes a re-evaluation of those parts in a way that causes designs to drift from their original models. The time spent in the design and implementation processes can be seen as critical for producing a viable design. If we desire to study systems that don't already exist, there is simply no way around spending time on the design itself because our ideas about what the design could or should be before entering those process can't really become real, and if they could they would be unlikely to meet any of the original design goals. From this perspective, we view the development process as a fundamentally necessary cost of creating any novel system. 
+
+% took this from some older writing I did - don't need to dig into that particular account because readers other than Wanda won't be familiar with it.
+% The second approach is to turn to Schutlze's confessional account of her dissertation field work in which she struggled with the practical realities of trying to be a participant in the work lives of her informants without injecting her own in-progress conceptualizations of their work experience and without her researcher identity becoming compromised by her affiliation with a specific work group in the organization. Yet, we (I think rightly) value her attempts to not simply sit outside the process she's studying, but to take part in it. This is fundamental to participant-observation as a methodology. 
+
+The second approach is to consider the distinctive values of the design process as a research process. In some fields, we expect that the researcher will become deeply embedded in the process on which their work focuses. In these fields, putting yourself at a distance and insisting that you can simply observe without being part of that process is often viewed as naive. Yet when we shift our focus to creating novel technical artifacts, we prefer to isolate either the users (as in lab studies) or the treat the artifact itself as stable (as in studies of the use of existing artifacts \emph{in situ}). It seems only natural to say that claims about the design of socio-technical systems can be easily augmented by a long-term, rich participation in that exact process. Playing the role of the active participant in the process grants us credibility and real analytical leverage. Not to say that you can't make arguments about design choices of a technology without having been part of the team that made them--you certainly can—-but being a participant in that process provides important insights that we are unlikely to find if we treat the technology as the black box output of an historical design process conducted by others. 
+
+
+% this paragraph needs to be about WHAT ARE THE INSIGHTS FROM THE DESIGN PROCESS?
+
+It is difficult to precisely identify the sorts of contributions that would not be possible without engaging in the design process because there are few examples of a team doing novel design work and handing off the result to a separate researcher and comparing their results. We do have a large body of research on systems conducted by non-designer researchers, but there's nothing to systematically compare it to. I hope that my work highlights how the researcher-as-designer can operate effectively in both roles and serve as a starting point for a broader discussion about why designing and studying systems is as valuable a research strategy as studying existing systems. \sidenote{Designing and building systems can take a substantial amount of time, especially if you hope to deploy those systems \emph{in situ} instead of in lab contexts. If papers are the main output metric for a researcher, this approach is not necessarily an efficient way to generate papers, since few conferences will accept papers on the design or development of a novel system alone. This might help explain the waning popularity of this sort of research.}
+
+If we accept that conducting design and development are valuable research processes, we must consider the challenges to this kind of work. If we hope to avoid the limits of studying design work in decontextualized lab situations, then we need to find situations were our system might credibly be used ``for real.'' The best situations are ones in which people interacting with and through the system can do so in the normal contexts in which they might interact with such a system: using their own devices, in places that are familiar to them, and with people who they might normally use such a system with. These contexts can be quite difficult to secure. Some systems require a certain scale to reveal meaningful results; had a researcher designed Twitter, they would have been very hard-pressed to find a context in which they could study it in a legitimate way. These constraints are also acute when designing for business contexts. Deploying research software in business contexts poses risks for the business in terms of data security as well as ethical concerns about businesses compelling their employees to use the system. Although this limits the kind of design work the researcher-as-designer might credibly study, these constraints are notably different than the constraints on researchers who study existing in-the-wild systems. In many ways, these biases are nicely complementary:
+
+\begin{table}[tb]
+\begin{tabular}{r|l}
+\textbf{Researcher-as-Designer} & \textbf{Researcher} \\
+using novel technology & using existing technology \\
+not widely deployed or available & popular/widely used \\
+smaller, bounded user groups & larger, fluid user groups \\
+extrinsically motivated users & intrinsically motivated users\\
+rougher edges & well polished\\
+consumer-oriented & consumer or professional\\
+bounded use durations & potentially unbounded use durations\\
+internal process traces & publicly observable process traces\\
+\end{tabular}
+\label{table:research-focus-comparison}
+\caption{Comparison between the kinds of technical contexts that the researcher-as-designer typically studies compared to the researcher.}
+\end{table}
+
+On most of these axes, it is not that researchers are incapable or uninterested in studying the kinds of systems that the researcher-as-designer studies, but that (for a variety of systemic and historical reasons) they have gravitated towards these themes. Whatever the reason, these differences add to the value of the researcher-as-designer approach. Even if taking the role of researcher-as-designer takes a substantial time investment to create the systems being studied, if it reveals insights about new kinds of systems that traditional researchers might not pay attention to, then it can be a valuable approach. This is most true with respect to the properties of the technology in the system. The researcher-as-designer can also be conceived of as mapping terrain that the designer-as-professional and other researchers will later cover when the technology becomes more widely accessible or viable. Furthermore, the kinds of deep data collection possible with custom-engineered systems open up a variety of analytical options that are often not possible when trying to collect data from publicly available and usually corporate-controlled contexts like Facebook or Twitter.
+
+\section{Methodology}
+% ??? Could talk about studies in authentic contexts and do the whole critique of lab-based studies here. Probably not super relevant, and a bit risky since a lot of the stuff I'll end up talking about doesn't have particular studies attached to it. 
+
+% other potential topic: broad ideas about how people and technology interact and what the focus of study is?
+
+
+\section{Related Work}
 Designing new systems for collaboration and communication, as opposed to studying existing systems, has long been a major stream of HCI and CSCW research. This section will summarize the most salient past work in this area, although little of this work is recent and responsive to the significant shifts in the way people use technology to communicate, collaborate, and play. 
 
 For a variety of reasons, there has been somewhat of a shift in interest away from the kind of hybrid face-to-face/mediated experiences I create towards building and studying systems for asynchronous experiences between much larger numbers of people. The advent of research on mass collaboration systems like \emph{Wikipedia} (e.g. \citep{Kittur:2007up}) and ``crowd sourcing'' (e.g. \citep{Bernstein:2010wk}) is part of a larger shift away from what was once the center of gravity of systems research. This shift is a natural response to changes in both technology and the common experience of modern collaborative technology users in a web-oriented world where asynchronous interaction became the norm. But the experiences this sort of research studies focus on are predominantly single-channel and asynchronous. This is in stark contrast to my work, which is concerned with the properties of multi-channel synchronous experiences. 
