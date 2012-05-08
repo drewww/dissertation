@@ -41,6 +41,8 @@ Certainly, these axes are not perfectly distinct (worlds with limited agency oft
 
 The best recent example of a world that offers that kind of rich agency and persistence is \emph{Second Life}, a world developed by Linden Lab. \emph{Second Life} is a free application that connects to a single monolithic ``Grid'' of \emph{Second Life} servers that provide a mostly continuous (flat) virtual space in which avatars can own land and items, build clothing, buildings, or vehicles, and embed behavioral scripts in their creations. The world also provides an economic system with its own currency system (the Linden Dollar, L\$), which is exchangeable at a fixed rate for US Dollars on a currency exchange that Linden Lab manages. The community that has arisen around \emph{Second Life} is extraordinarily diverse and rich, but an in depth discussion of its dynamics is beyond the scope of this chapter. There are a number of books that describe the history and culture of \emph{Second Life}, which provide a good introduction to that topic, however. \citep{Au:2008va, Ludlow:2007uu} For my purposes, \emph{Second Life} is critical as an example of a world in which avatars have a considerable amount of control over the design of environments, and so \emph{Second Life} has been instrumental in developing an intuition for how virtual spaces influence the behavior of people in them. It has also been useful as a platform for exploring the design space of algorithmic architecture. For much of this chapter, I will turn to \emph{Second Life} as a source of inspiration, as well as to draw comparisons between the general model for virtual architecture that I explore in this thesis and the model that \emph{Second Life} embodies.
 
+The following sections lay out the pieces of what might make something feel like a world. There is not clear set of necessary and sufficient conditions for world-ness. Instead, these sections introduce a series of concepts that all lend-themselves to fostering a sense of world-ness. These concepts are Representation, Spatiality, and Presence. 
+
 \subsection{Representation and Function}
 Specific features of both physical spaces and virtual spaces can be thought of as serving symbolic and functional purposes. As virtual spaces were first being conceived it was not obvious that they would draw their symbolism heavily from physical spaces \citep{Novak:1991ue}. Novak would no doubt be surprised to see how familiar the design elements of can be. In the free-form world \emph{Second Life}, for instance, there are countless recreations of both specific architectural landmarks as well as buildings that ape familiar architectural styles. Furthermore, those buildings are filled with rooms furnished in a way that would not stand out in the least from their real world analogs. Why is it that, free of the natural laws of the physical world, so much of virtual world design is concerned with recreating familiar physical spaces?
 
@@ -66,8 +68,7 @@ It's difficult to pin down exactly what makes a virtual world a world. In the pr
 One question we are frequently asked is why use 3D for a collaboration environment? While it might be possible to build a 2D tool with functionality similar to MPK20, the spatial layout of the 3D world coupled with the immersive audio provides strong cognitive cues that enhance collaboration. For example, the juxtaposition of avatars in the world coupled with the volume and location of the voices allows people to intuit who they can talk to at any given time. The 3D space provides a natural way to organize multiple, simultaneous conversations. Likewise, the arrangement of the objects within the space provides conversational context. If other avatars are gathering near the entrance to a virtual conference room, it is a good guess that they are about to attend a meeting in that space. It is then natural to talk to those people about the content or timing of the meeting, just as you would if attending a physical meeting. In terms of data sharing, looking at objects together is a natural activity. With the 3D spatial cues, each person can get an immediate sense of what the other collaborators can and cannot see.\citep{Anonymous:tv}
 \end{quotation}
 
-
-The role of dimensionality in virtual worlds is subtle. Like the authors of Wonderland (neé MPK20), I am often asked about the tradeoffs between working in two dimensions versus three. To answer this question, I think it’s important to tease out the difference between dimensionality and spatiality.
+The role of dimensionality in virtual worlds is subtle. Over the course of my work, I have shifted from focusing on three dimensional representations to two dimensional representations. Although this shift leads to a radical change in how people view a space (few people look at a two dimensional web application and say ``this is a virtual world!''), it is perhaps not as fundamental a shift in metaphor as you might initially suspect. This section will draws a distinction between the dimensionality of a system (which is primarily a representational quality) and the spatial properties of a system (which is primarily an active, functional quality). Although often conflated, these are separate qualities. Both can promote a sense of world-ness, but it is quite possible to have a feeling of occupying a world without a three dimensional representation, provided there is some sort of spatial structure.
 
 The dimensionality of a world is an aspect both of its display and its abstract data representation. Objects in a three-dimensional world have a position in three-dimensional space, a solid volume, and an orientation in three rotational axes. In an intuitive sense, a three-dimensional virtual world looks a lot like the three-dimensional physical world we are used to. The programmatic representation of the world need not be bound to its visual representation, however. It is possible to build a three-dimensional representation of a fundamentally two-dimensional world. The MASSIVE system demonstrates this nicely; they had both a three-dimensional visual client and a text based two-dimensional client. Both clients could almost completely represent the world state. As a world, MASSIVE had no vertical dimension, so its three-dimensional representation was simply a skin on a two dimensional world. \citep{Greenhalgh:1995gz} What’s important, though, is drawing a distinction between the dimensionality of the world itself and the dimensionality of its visual representation—they need not necessarily be the same thing.
 
@@ -81,9 +82,34 @@ Returning to the quote about MPK20 that introduced this section, I argue that th
 
 While I believe that worlds that are fundamentally two-dimensional are not inherently less spatial than their three-dimensional counterparts, there is something to be said for the representational language (as opposed to the functional or algorithmic language) of three-dimensional spaces. As discussed in the previous section, three-dimensional spaces tend to offer more legible spaces because they use a representational language that is familiar. Meeting rooms represented in three dimensions (or even some sort of isometric view) may be more obviously meeting rooms than the very abstract vector-graphics style rooms I show in this chapter. For my purposes, though, the dimensionality is not particularly important for demonstrating the design space. Instead, it is spatiality that is critically important for creating a sense of being in a world.
 
+% TODO talk about the tradeoffs inherent to spatiality, per discussions with sinchan?
+
+% TODO show pictures of both interfaces that promote a sense of presence (eg turntable) but aren't actually spatial? I had some thought about habbo hotel and that israeli chat system that I can't seem to recall just now. 
+
 \subsection{Representation and Presence}
 
 % add an argument here that the final component to world-ness is a representation of specific people. I'm not sure that's in the original thesis so it probably needs to be written from scratch.
+
+The most visible distinction between world-like experiences and non-world like experiences is the way that people are represented. In a system like \emph{Second Life}, people are represented as quasi-realistic avatars. Not only do they look like people, they move and interact like people: they shift stance, walk, run, wave, and dance in more or less realistic ways. When these representations are combined with literally-designed spaces (that is, spaces that look like non-virtual spaces) it all starts to feel quite familiar and world-like.
+
+This is clearly an attractive approach; it seems natural to expect that a software world that looks like the real world that is populated by people who move look and move like real people that it will be valuable. We'll defer a deeper discussion of why this is a bad assumption. Instead, I seek to place avatars on a continuum of representation strategies, any of which can support a sense of a sense of presence. This argument is analogous to the dimensionality and spatiality argument made in the previous section; spatiality is where the world-ness comes from, and you can create spatial experiences with a variety of dimensional choices. The same is true for representing people. What's important is that you foster a sense of presence, not that a particular representation is inherently superior.
+
+
+% Erm, this is an interesting argument but I'm afraid of making it too strongly without any actual research here. This was sort of okay in masters thesis land but is probably bad here. Return to this later and decide if I want/need it to be there.
+
+% basically the plan is:
+%  - talk about different strategies other than avatars
+%		- performance based strategies on stackoverflow, forums
+%		- image avatars (ala facebook, twitter)
+%		- pseudonyms (everything)
+%		- mention MUD self-descriptions 
+%
+% introduce the difference between facebook where you see the results of actions, but not the people doing the actions themselves. use room metaphor.
+% this is the heart of the difference between representation and presence. few would describe facebook as a virtual world because there is little sense of the presence of others; someone who is not actively writing something on facebook has no representation. There is thus little sense that someone is actually present. We see the footprints but not the people. 
+%
+% IM distinction
+% talk about text-based
+
 
 
 \section{Information Spaces}
