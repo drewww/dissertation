@@ -130,16 +130,54 @@ This is clearly an attractive approach; it seems natural to expect that a softwa
 
 
 \section{Information Spaces}
-As a first step in exploring the potential of virtual architecture, I developed a space in Second Life that focuses on the social meaning that an avatar's position in a space can have and how that meaning can be augmented using some of the aggregative properties of virtual space. \citep{Harry:2008ww} This particular design is focused on meeting situations. In meetings with more than a few people, it can be challenging to understand other people's feelings about an issue, reach consensus, and influence others. Even logistical tasks like staying on an agenda and distributing tasks appropriately can be difficult. The design addresses these collaboration challenges by creating a meeting space focused on non-verbal signaling using avatar positions. This is intended to be a kind of backchannel to the core conversation, much like body language can be in a face-to-face meeting. To support this use, I built a range of social utilities---systems that make visible properties of avatars' social behavior in the space. These visualizations are all controlled by a centralized dashboard, such that the nature of the space can be controlled by the moderator, much like a meeting organizer might set up the chairs and projector in a physical meeting room depending on the kind of meeting they were having. An overview of the meeting space can be found in  Figure \ref{fig:meeting_space_overview}.\sidenote{This section draws heavily from \citep{Harry:2008vx}.}
+As a first step in exploring the potential of virtual architecture, I developed a space in Second Life that focuses on the social meaning that an avatar's position in a space can have and how that meaning can be augmented using some of the aggregative properties of virtual space. \citep{Harry:2008ww} This particular design is focused on meeting situations. In meetings with more than a few people, it can be challenging to understand other people's feelings about an issue, reach consensus, and influence others. Even logistical tasks like staying on an agenda and distributing tasks appropriately can be difficult. The design addresses these collaboration challenges by creating a meeting space focused on non-verbal signaling using avatar positions. This is intended to be a kind of backchannel to the core conversation, much like body language can be in a face-to-face meeting. To support this use, I built a range of social utilities---systems that make visible properties of avatars' social behavior in the space. These visualizations are all controlled by a centralized dashboard, such that the nature of the space can be controlled by the moderator, much like a meeting organizer might set up the chairs and projector in a physical meeting room depending on the kind of meeting they were having. An overview of the meeting space can be found in  Figure \ref{fig:information_space_overview}.\sidenote{This section draws heavily from \citep{Harry:2008vx}.}
 
 Beyond the space itself, I also developed a number of meeting support widgets that can augment a virtual meeting room. These widgets are not strictly architectural, but they show how different kinds of tools could create virtual spaces that are more or less appropriate for a certain kind of meeting.
 
 \begin{figure*}[t]
 	\includegraphics{figures/information-space-iso-overview.png}
 	\caption{An isometric overview of the \emph{Information Space} with all the visualization components turned on.}
-	\label{fig:meeting_space_overview}
+	\label{fig:information_space_overview}
 \end{figure*}
 
+
+\subsection{Design}
+
+The space is divided into four major zones. The main area is like a traditional sports field with end zones labeled ``agree'' and ``disagree''. It provides a space for people to position their avatars on a continuum to show their attitudes about the issue under discussion. The fluid self-arrangement of people within this space based on their opinions provides a literal basis for seeing where someone is coming from and the status of the group's attempt to reach consensus. A single-axis continuum is used so that multiple people can easily be at the same continuum position without displacing each other.
+
+Of course, not everyone always wants to reveal their opinion about the issue at hand. Surrounding the main agree/disagree field is an area for people to stand who want to participate in the discussion without putting their avatar on the continuum. Still further from the field is an observation area for people who want to be present, but not participating. Finally, there is a platform for the moderator with controls to manage properties about the space itself. This layout is shown in figure \ref{fig:information_space_layout}. For the sake of simplicity, most examples in this chapter will focus on the Agree/Disagree continuum, but the implications of other floor types (for instance a process oriented Keep Talking/Move On field) will be discussed later. This spatial approach is a powerful organizational metaphor because it both relies on our knowledge of the meanings of position relative to other people in physical spaces \citep{Yee:2007cl} and the metaphors inherent to interactions in a spatial environment. \citep{lakoff_metaphors_1980}
+
+\begin{figure*}[t]
+	\includegraphics{figures/layout.png}
+	\caption{A top-down view of the space, to illustrate its different zones.}
+	\label{fig:information_space_layout}
+\end{figure*}
+
+Because the space is divided into socially meaningful regions, the most important information we can visualize about someone's position is how long they've been somewhere and where they last came from. When an avatar pauses for a while, a transparent column will slowly rise out of the ground. I call these columns ``dwell indicators.'' If they move, the column will slowly shrink and eventually disappear. In this way, avatars leave a temporary mark on the space with their presence, and other people can use this signal to better understand what their position means. Someone who has been standing on the agree side of the field for the entire discussion is quite different from someone who just arrived there; this approach distinguishes those meanings visually. A dwell indicator is shown in figure \ref{fig:information_space_dwell}.
+
+As an avatar moves around this space, their path is drawn behind them. This helps meeting participants understand how an avatar arrived at their current position. In particular, it fits well with the dwell indicators; when an avatar who has been standing somewhere for a while (as shown by the dwell indicator) moves to a new position, their old dwell indicator will start to shrink and a line is drawn between their old position to their new position. This connects the two dwell indicators and shows how long the avatar was in their previous position, and how recently they moved. In the case of the agree/disagree floor, this would show that someone who perhaps had long been against a particular proposal had changed their mind. This is the kind of behavior that this space seeks to visually emphasize because it's socially meaningful but is otherwise hard to convey non-verbally. A position history trace is shown in figure \ref{fig:information_space_traces}.
+
+\begin{figure*}[tp]
+	\includegraphics{figures/dwell-crop-lower.png}
+	\caption{An avatar with a dwell indicator growing slowly at its feet.}
+	\label{fig:information_space_dwell}
+\end{figure*}
+
+\begin{figure*}[tp]
+	\includegraphics{figures/traces-lower.png}
+	\caption{An avatar after moving from the agree side to the disagree side. The position history shows the avatar's path, and is colored according to the area in the space they were in.}
+	\label{fig:information_space_traces}
+\end{figure*}
+
+\begin{figure*}[tp]
+	\includegraphics{figures/chat-history-lower.png}
+	\caption{An avatar after moving from the agree side to the disagree side. The position history shows the avatar's path, and is colored according to the area in the space they were in.}
+	\label{fig:information_space_chat}
+\end{figure*}
+
+The space also records typed contributions in text boxes that appear above the speaker's head and then rise slowly. This creates a visualization of chat over the course of the meeting, displaying what was said, when it was said, and where in the room the avatar was when they said it. \citep{DiMicco:2007ie} In aggregate, it also shows that patterns of conversation of the course of the meeting. Much like the conversation visualization work discussed in earlier chapters, this allows participants to be self-reflective about the dynamics of the meeting as it occurs. By making objects appear in the space itself, it foregrounds these issues and makes imbalances in participation harder to avoid. Because the boxes contain the text itself, it is also possible for participants to zoom in on text messages and view the conversation within its spatial context---which is lost in a text-only transcript of the meeting).
+
+Finally, the floor of the agree/disagree field displays the current average vote (by moving side to side along the floor), as well as its deviation (by growing wider or thinner). Like chat messages, a representation of the group's collective view also floats up into the sky. These bars provide more context about the overall feeling of the avatars in the space over time, showing aggregate views of avatar movement. Furthermore, the history of the average position separates historical chat messages based on which side of the average the message came from. This helps contextualize the chat messages as well. For instance, it is easy to tell if a talkative participant was way out of line relative to the group consensus.
 
 
 \section{Presentation Spaces}
