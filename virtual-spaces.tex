@@ -152,9 +152,26 @@ Of course, not everyone always wants to reveal their opinion about the issue at 
 
 The Agree/Disagree floor is only one potential floor design. Although it makes for a good thought experiment and it will be used for much of this section, its actual utility is limited. Few meetings are sufficiently organized for this approach to be effective. Even with a strong moderator who makes clear exactly what issue avatar's positions are agreeing or disagreeing with it can at times be ambiguous. There are a number of other options for floor designs that are more generally useful.
 
-The first is a Keep Talking/Move On floor. This floor addresses the need for meeting participants to be able to express when they think the group as a whole should change to a new discussion topic. In much the same way that Robert's Rules of Order \citep{RobertIII:2000tq} is a process that is focused on how time is spent, using the Keep Talking/Move On floor is a way of actively expressing your desire to move on or keep talking about an issue and for others to passively judge the interests of the group, even if a more formal structure is not in place. This is a generic issue, and is one that can be particularly hard to resolve in medium-sized groups. Participants might not want to speak up and say that they want to move on, but if they had a non-verbal way to express their desire to move on (and gauge others' reactions) meetings might spend less time on topics that they didn't need to.
+\begin{marginfigure}
+	\includegraphics{figures/keep_talking_from_above.png}
+	\caption{A view of the keep talking / move on space from above.}
+	\label{fig:keep_talking_floor}
+\end{marginfigure}
+
+The primary alternative is a Keep Talking/Move On floor. This floor addresses the need for meeting participants to be able to express when they think the group as a whole should change to a new discussion topic. In much the same way that Robert's Rules of Order \citep{RobertIII:2000tq} is a process that is focused on how time is spent, using the Keep Talking/Move On floor is a way of actively expressing your desire to move on or keep talking about an issue and for others to passively judge the interests of the group, even if a more formal structure is not in place. This is a generic issue, and is one that can be particularly hard to resolve in medium-sized groups. Participants might not want to speak up and say that they want to move on, but if they had a non-verbal way to express their desire to move on (and gauge others' reactions) meetings might spend less time on topics that they didn't need to.
+
+
+
+
 
 Although these are the only two floor designs that are currently implemented, there is potential in other kinds of floors. Floors with a few multiple choice options make it easy to hold straw polls. A calendar display could be used to show preferred dates for an event. Floors could be used for setting up speaking queues, as well, dividing the audience between those who are waiting to say something, those who are speaking, and those who don't have anything to say. Multi-variate floors are also possible, although there isn't a nice way to let multiple avatars stand at the same point in the space in the same way that you can in single variable floors like Agree/Disagree.
+
+\begin{marginfigure}
+	\includegraphics{figures/agree-disagree-redux-floor.png}
+	\caption{An early floor design from the first \emph{Information Spaces} prototype. Far more complex than subsequent designs, this approach sought to support a much wider range of non-verbal actions. Ultimately, the design shifted to create some of these spaces in less explicit ways and to expect less frequent movement on the part of participants; this floor implied constant shuffling around as speakers changed and queued to speak.}
+	\label{fig:agree_disagree_initia_design}
+\end{marginfigure}
+
 
 \begin{figure*}[t]
 	\includegraphics{figures/layout.png}
@@ -230,6 +247,47 @@ In a virtual space where avatars can easily act at a distance, the dashboard sta
 	\caption{The dashboard that controls features of the space. Left: A button for making new todo objects. Center: Toggle switches for different visualization features. Right: Buttons for changing the floor design.}
 	\label{fig:information_space_dashboard}
 \end{figure*}
+
+
+\subsection{Deployments}
+We have conducted evaluations of this approach. We worked with two existing discussion groups in Second Life to arrange meetings inside an early prototype design. The first group had 7 participants and the second group had 12 participants. Each group was given a list of controversial topics and asked to vote on which one they were most interested in discussing. After choosing a specific topic, they were given an editorial on that topic and then asked to move their avatar to represent whether they agreed or disagreed with the author's argument and to hold a discussion about their opinions on the topic. After the discussion, feedback about the meeting space was collected informally through both individual conversations with participants and group comments.
+
+\begin{marginfigure}
+	\includegraphics{figures/meeting_space_trial_1.jpg}
+	\caption{Screenshot of one of the test deployments. These deployments were done with an earlier version of the system which behaved in slightly different ways.}
+	\label{fig:meeting_space_trial_1}
+\end{marginfigure}
+
+Participants were, on the whole, very excited about the potential of the design space. Many of them focused on the social implications of this arrangement, thinking out loud about how they would respond to, e.g., their boss moving to ``agree''. They also appreciated the way the space aggregates history, because they were often pulled away from Second Life briefly and lost track of what was going on.
+
+\begin{marginfigure}
+	\includegraphics{figures/meeting_space_trial_2.jpg}
+	\caption{Screenshot of one of the test deployments. These deployments were done with an earlier version of the system which behaved in slightly different ways.}
+	\label{fig:meeting_space_trial_2}
+\end{marginfigure}
+
+In these tests, though, participants rarely moved their avatars around the space to take advantage of the many visualization features. This was primarily due to the modality of the Second Life interface. When we were ran these studies, Second Life did not support voice chat (it has since been added), and avatar movement is controlled by the keyboard. Switching between movement mode and typing mode is a little bit confusing. This makes it hard for avatars to both move and talk at the same time.
+
+The other major theme from these experiences was that even relatively sophisticated Second Life users make infrequent use of the elaborate camera controls. As designers, we assumed that all users would be comfortable detaching the camera from their own avatar and inspecting objects in the environment—the conversation archive, in particular. This was not the case with our test groups. Many reported having forgotten about the above-their-heads information because they didn't normally change their camera view. They also reported that their avatar movement was often used to change their camera view, and so making that movement socially significant was sometimes problematic. Instead of visualizing their feelings about the topic, sometimes the space ended up visualizing their attempts to get a better view of the space without using the advanced camera controls.
+
+As with all domains, applications that challenge users' ideas about what's possible can be hard to understand. In the case of Second Life, this is compounded by user interface issues. This leaves us with a number of possible explanations for users' excitement about the ideas behind Information Spaces but general lack of engagement with specific features. I think the most probable is that because this project reflects both a shift in how to interact with spaces in Second Life as well as forces users to use the interface in ways they might not be familiar, it takes a longer term study than we were able to conduct. Perhaps with a user group that was even more familiar with Second Life and could spend more time acclimating to the environment we could better address aspects of the design in more detail.
+
+\subsection{Analysis}
+
+I propose that there are quite a few different ways in which this design influences the behavior of avatars. As in any meeting situation, the space itself is only part of the picture, and so while all these influences have not necessarily been observed experimentally, it is worth thinking through what the range of possible impacts could be.
+
+One theme common to many of the features of Information Spaces is an emphasis on encouraging more equal participation by showing relative participation levels of participants. Over-talkative meeting participants are reminded over their activity, and people participating less can find space to get their say. This can work on a group level, too. It may be clear by the current average vote in the room that the consensus is squarely on one side, but a vocal minority is out-talking a quiet majority. By color-coding chat messages based on where in the spectrum they come from, the for/against balance can be equalized. Compared to the approach employed by \citet{DiMicco:2007ie}, using shared displays to show relative participation, our approach has a number of benefits. First, mediated participation is far easier to instrument to generate the sorts of graphs in \emph{Second Messenger}. Second, virtual worlds make it easy to render the data in-place, rather than leaving it to users to locate themselves in a displaced representation and map it back onto people. We cannot make a strong argument that this would change the findings from DiMicco, but it is conceptually appealing.
+
+There is an inherent bias in this approach towards meetings in which participants are trying to find better ways to non-verbally express their attitudes. The whole space is focused on making these signals more legible and visible. For participants who might not be comfortable speaking up, these other channels might be a better fit. If there is not genuine interest or cultural support for this kind of communication, it may be that making these signals more visible is in fact a reason for a participant to be even less open about their feelings. This highlights a limitation in \emph{Second Life}---any system that relies on an avatar's location makes it difficult to anonymize their participation. Anonymized participation is a common feature in GDSS systems that is difficult to replicate in a user-friendly way in \emph{Second Life}.\sidenote{This of course presumes that an avatar's identity is what matters. If the mapping between avatar and keyboardist is not made clear, anonymity is manageable. But fluid systems where you can flexibly claim anonymity sometimes but not others (like \emph{Quora}) are difficult to create.}
+
+If there is not group interest in equal participation, it may be that this kind of space would reinforce hierarchies instead of subverting them. While in a face-to-face meeting, substantial effort might be spent trying to figure out what an important decision maker feels about an issue, in this environment they may just move right to that position and everyone else could follow them there, obviating any real discussion of the issues. It may be that if this is really how meetings work, then quickly acknowledging that everyone wants to follow the boss might not be a bad outcome. This effect is limited by the informality of the space. No one is required to indicate a position at any time; instead changes in position (from undecided to decided, for instance) can be done strategically. The system is not designed to be coercive, simply to create now opportunities for expression. 
+
+By making visible someone's constant attitude about something, meeting participants might be discouraged from moving because dwelling somewhere for a while becomes seen as a status symbol. I suspect that in this situation, the dwell indicator is only making visible pre-existing attitudes about changing ones opinion. In a meeting environment where opinion changes are valued, the bias could just as well be the opposite; staying somewhere too long looks like inactivity and disconnection because the group expectation is that participants will be actively representing and changing their opinion. Participants' use of avatar movement in place of camera control exacerbates this issue; a user that wants to look around will have to give up their dwell indicator, which might cause users who become attached to their dwell indicators to simply not move at all, limiting the impact of the other visualization systems spread around the space. 
+
+\subsection{Grounding, Actions, and Attention}
+
+% 
+
 
 
 \section{Presentation Spaces}
