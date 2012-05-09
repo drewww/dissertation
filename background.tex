@@ -110,7 +110,9 @@ This distinction is important because our work often seeks to address questions 
 I am far from the only person conducting work in this manner. There is a long history of \emph{in situ} work. The vast majority of the work described in the \emph{Channels} section in related work is conducted this way. \emph{Thunderwire}, \emph{Cruiser}, and \emph{Portholes} are prime examples of this approach. But recent work has focused instead on 
 
 
-\section{}
+\section{Research Themes}
+
+Elaborate on the main themes at much more length here than the very short introductions in the intro chapter. This will probably require some actual novel reading, because I'll need to discuss it precisely. This will be particularly true for attention, where I don't know the literature super well.
 
 
 \section{Related Work}
@@ -122,7 +124,7 @@ In this work, I focus on interactions within groups both small and large, co-loc
 
 % In my work, I seek to create richer representations of people and better-support person-person interaction instead of person-document-person interaction. 
 
-My survey of related work is organized into three major design strategies: translucence and awareness, adding new communication channels, and design techniques to help people reflect on their own participation and the participation of others. These design strategies have influenced my own design process and have important findings related to my three main research themes: grounding, actions, and attention. As I discuss each design strategy, I will point out their connections to the main research themes. Table \ref{tab:related-work} summarizes the major work covered in this section, and its relationship with the three themes. 
+My survey of related work is organized into three major design strategies: translucence and awareness, adding new communication channels, and design techniques to help people reflect on their own participation and the participation of others. These design strategies have influenced my own design process and have important findings related to my three main research themes: grounding, actions, and attention. As I discuss each design strategy, I will point out their connections to the main research themes. Table \ref{tab:related-work} summarizes the major work covered in this section, and its relationship with the three themes. After a discussion of work primarily in the systems literature, I will also cover related theoretical contributions and perspectives that influence and contextualize my work.
 
 
 % TODO think about whether to add in a chunk about theoretical perspectives here. Ultimately in the final dissertation there will need to (probably) be a chapter or serious chunk of one laying our theoretical perspecives on grounding, attention, and non-verbal actions. But I don't really want to have to do that now.
@@ -433,3 +435,37 @@ These are all examples of the accumulate and reflect design strategy, where the 
 %
 %
 %  One other strategy is to think about the three research themes: grounding, non-verbal actions, and attention, and go on a hunt for good literature about each of those. 
+
+
+\subsection{Meeting Structure}
+
+Any system designed to support interaction makes a number of implicit assumptions about the nature of the social process it's trying to support. This is true across design domains. For instance, calendaring systems often assume that the important aspects of someone's work life can be captured in meetings. Meetings have a time, a place, and other meeting participants. Certainly, this describes some kinds of work life, but plenty of other jobs don't fit with that metaphorical structure. Imagine a car repair shop; a system to support that sort of work environment would necessarily be concerned with specific tasks that need to be done and which people in the shop were going to do them. A meeting organization system would not be as appropriate for managing that environment. Of course, over time systems influence people's behavior in such a way that it makes it hard to distinguish between the implicit assumptions about how people would use the system and how their behavior has adjusted to best make use of the systems they have available. 
+
+Meetings are rich social experiences that are composed of a variety of deeply interconnected components. I turn to \citet{McGrath:1984un}'s theoretical framework as a good starting place for understanding the diversity of factors that influence a group's process. McGrath describes groups as ``task performance systems'', recognizing the critical extent to which tasks characterize a group's interaction, along with the group composition, the properties of the environment, and properties of the individual. He identifies eight types of tasks: planning, creativity, intellective, decision-making, cognitive conflict, mixed-motive, competitive, and performance. In this chapter we are primarily concerned with decision-making tasks.
+
+Various structures for organizing decision-making have been proposed. One interesting structure is IBIS \citep{Kunz:1970wo}, which classifies the structure of arguments in design meetings. In their model, a discussion has Issues (e.g. ``Users aren't using this feature as much as we thought they would''), Positions (``We should include the feature in our tutorial'') and Arguments (``Not many users are following the tutorial either, we need another way to promote this feature.'') These objects are linked by different relationships, like ``supports'', ``objects-to'', ``responds-to'' or ``specializes''. This creates an abstract argument network that organizes the discussion around concrete issues. \citet{Conklin:1988fr} describe a computer-supported system that uses this structure for both synchronous and asynchronous discussions. This basic approach of modeling a particular task network in a formal way is shared by many Group Decision Support Systems of which \citet{nunamaker_electronic_1991} is a nice overview.
+
+In McGrath's terms, though, systems like gIBIS (and many of the systems described in the GDSS literature) are not strictly addressing one task. They're nominally about making decisions, but a group using gIBIS is also sometimes trying to solve intellective tasks (e.g. solving questions with a single right answer), generative tasks, and perhaps resolving conflict tasks. The precise mix of these tasks varies in each group's process, which creates a significant diversity in system designs. Structures that assume a particular task profile are unlikely to be effective when applied to another task profile.
+
+Task profiles are one example of a formalizing instinct to organize and abstract certain features of human practice in a way that can help us both better understand those practices or (in the case of designers) design tools that support those practices. Not only is it a question of useful or accurate abstractions, it is also a tension between the right amount of structure and too much structure. A model like IBIS or Roberts' Rules of Order \citep{RobertIII:2000tq} is relatively heavy amount of structure. In contrast, process models like nominal group technique \citep{Bartunek:1984cq} operate at an even higher level of abstraction. In general, my instincts lean towards less formality rather than more, but that reflects the sorts of practices I'm creating tools for more than a real argument for either strategy. Regardless of how one decides to abstract, there is still a complex relationship between the selected formalism and the practice it is either modeling or seeking to promote. \citet{Berg:1997bs} describes this interplay this way:
+
+\begin{quotation}
+By offering abstracted models of the work and/or by processing input into output, formal tools are attributed central roles in organizing the work within the workplace.
+\end{quotation}
+
+Berg organizes the camps on this issue into two main discourses: naive formalists who believe that formal models are necessary for rational or scientific decision-making or work. In contrast, one can make the argument that the richness of the empirical world defies our ability to always reduce it to formal models. This argument has a political angle to it, as well, arguing that (as Berg describes it) formal tools will ``inevitably function in a rigid, impoverished way, thus de-skilling and dehumanizing the work of those who are caught in its cold, instrumental rationality.'' These are both extreme views and not widely held at this point. Berg characterizes the distinction between the formal tool and the human practice as being like the distinction between the map and the terrain it describes. Maps are a way of abstracting and describing terrain, while also influencing the ways that people understand and develop that terrain. They are necessarily tightly interrelated.
+
+Although Berg is primarily interested in building theoretical tools for better understanding practices at the boundary between formal tools and human practices, this perspective is valuable too for designers. Formal model building is a critical step in designing any sort of software system. Indeed, designing abstract representational models for data is a core part of any software design process. \sidenote{\citet{Hughes:tv} is a clever (if somewhat inaccessible to non-database engineers) analysis of the challenges representing human marriage practices in a database. It illustrates, too, the built in biases of computational systems towards certain sorts of abstractions.} In this mode we are faced with the problems of building the map from scratch, and trying to understand the relationship between the sort of map we build and the terrain it describes. Furthermore as researchers we frequently have our own agendas and are trying to describe future terrains that may not exist yet. Put another way, maps are sometimes guides to exciting new terrain, not just describing a certain perspective on existing terrain. This is more precisely the sort of work that I do.
+
+As I describe each of my projects, I will attempt to describe the sorts of existing practices it seeks to support as well as the sorts of practices it aims to encourage through a certain sort of formalization. 
+
+
+
+
+
+
+
+% Another model with a task profile more focused on resolving conflicting viewpoints is the Public Conversations Project \citep{PublicConversations:ta} uses a system for having dialog about controversial issues (e.g. Israel/Palestine, reproductive rights, etc.) that focuses on the context and structure of the meeting. These meetings are intentionally not about reaching consensus, but instead about building understanding, which makes an argument-based structure like IBIS inappropriate.
+% 
+% 
+% Part of what's exciting about working in virtual worlds is that the basic rules of a space don't preclude lots of different kinds of interfaces being built within it. The system I propose in this chapter is a simple model (neither IBIS or the PCP models) that is appropriate for only certain kinds of meetings. I imagine it as being one of eventually a set of spaces designed to work for specific situations. Just as a company might choose to use IBIS for some of its meetings, a meeting moderator in a virtual world can choose to use this space or some other virtual space for their meeting depending on whether or not their needs and the structure of their interactions are a good fit for the space.
