@@ -287,7 +287,41 @@ If there is not group interest in equal participation, it may be that this kind 
 
 By making visible someone's constant attitude about something, meeting participants might be discouraged from moving because dwelling somewhere for a while becomes seen as a status symbol. I suspect that in this situation, the dwell indicator is only making visible pre-existing attitudes about changing ones opinion. In a meeting environment where opinion changes are valued, the bias could just as well be the opposite; staying somewhere too long looks like inactivity and disconnection because the group expectation is that participants will be actively representing and changing their opinion. Participants' use of avatar movement in place of camera control exacerbates this issue; a user that wants to look around will have to give up their dwell indicator, which might cause users who become attached to their dwell indicators to simply not move at all, limiting the impact of the other visualization systems spread around the space. 
 
-\subsection{Grounding, Actions, and Attention}
+
+
+
+\section{Presentation Spaces}
+
+% TODO find the citation for the paper where nicole + jon talk about the problems with presentations in virtual spaces.
+
+For many people, virtual worlds like \emph{Second Life} offered a chance to be part of a broader intellectual life that might not be available to them offline. Although it has faded somewhat, there was a period where lectures and presentations in \emph{Second Life} were reasonably common and provided a platform for people to find interesting social and intellectual contexts without leaving their house. In many ways, this was always the strongest argument for virtual worlds. While they ultimately had a difficult time competing with enterprise collaboration software, \emph{Second Life} in particular had a vibrant community around these sorts of events. Like meeting rooms, though, the spaces in which these events took place were overwhelmingly literal in their architecture. \sidenote{The only real concession to the virtuality of the environment was that each ``sim'' in \emph{Second Life} had a population limit, so the best event spaces were located on the corner where four sims met, to maximize the population. You can see across sim boundaries, but not talk.} The speaker typically gave a presentation either through streaming video or (later) used the in-world voice system. Slides were sometimes used, either in a video stream or embedded in the world and managed using in-world tools.
+
+In this section, I describe \emph{Presentation Spaces}---a system to support these sorts of presentation activities in a virtual world. I take as my starting place the set of challenges laid out by \citet{Yankelovich:2008vk} (with some adjustements):
+
+\begin{description}
+\item[Static Presenters]{Managing your avatar in a way that's convincing and demonstrates engagement while also handling the usual challenges of presenting is difficult.}
+\item[Dynamic Audiences]{In face to face presentations, our movement is influenced by social norms about having to walk through other people, create noise, etc. In virtual worlds, these tend not to be meaningful limits so people move around much more in ways that is not socially significant but can be quite distracting.}
+\item[Communication Confusion]{How can audience members talk to each other? How does that scale up to lots of people? How can the audience communicate to the speaker in a meaningful/useful way?}
+\item[Usability]{Virtual worlds make it easy to see people, but building applications in them can be very difficult; managing HUDs/UIs/cameras is typically quite difficult.}
+\end{description}
+
+Many of these problems are shared by non-virtual mediated presentations as well. Tools like \emph{WebEx} suffer from many of these issues, too. Although it might be nice to have better audience/presenter interactions, a virtual world context forces these issues. Watching an un-moving avatar representing someone giving a presentation as an audience member is far more disconcerting than watching a slide deck in \emph{WebEx} because there is no ostentatiously awkward representation of that person that they're not attending to. The same is true of the audience. In a traditional conferencing context the audience is essentially invisible, so their absence or activity doesn't get in the way of anyone else's experience. Representing that audience graphically raises the stakes and means we need to either develop ways to incentivize certain sorts of behaviors and discourage others, or think about alternative representations of their activities. 
+
+\emph{Presentation Spaces} seeks to use spatiality to address these issues in an internally consistent way. Instead of assuming a static space, we use the slides of the presentation itself as the primary organizing feature of the space. In an otherwise flat and featureless space, the slides are spread out linearly. The slides form a space that is defined by the slides, and people's positions relative to the slides can become socially meaningful. As in the \emph{Information Spaces} project, there are a series of independent tools that help manage issues like communication confusion, audience movement, and audience/presenter communication. 
+
+This system was built on the \emph{Wonderland} platform \citep{Kaplan:2011en} originally developed at Sun Labs. Although there are significant technical differences between \emph{Wonderland} and \emph{Second Life}, they are broadly similar: they present people with avatars, they support spatialized voice communication, and objects in the world can respond to user input in different ways. The two primary features of \emph{Wonderland} that differentiate in from \emph{Second Life} are its federated, open source server model (compared to \emph{Second Life}'s monolithic, closed source server model) and its broader programmatic access for system developers to more of the internal behaviors of the world (which \emph{Second Life} eschews for security reasons). 
+
+
+\subsection{Design}
+
+\subsection{Analysis}
+
+% not even sure what to say here since there was basically no testing.
+
+
+\section{Grounding, Actions, and Attention}
+
+% TODO Update this in light of presentation spaces, too. 
 
 For most of the projects described in this thesis, there is a necessary transposition between the visualization and the world. We are usually limited, in physical spaces, to using projections or screens that require translation between the digital representations of people and any sort of visualization of their behavior. If we take for granted that people identify with the avatars of themselves and other as essentially extensions of their physical body \sidenote{There is good evidence that this is the case. \citep{bailenson} \citep{Yee:2009vt} \citep{Yee:2007cl} all provide support for this perspective, although there are clearly limits.} then being able to do in-place visualization seems like a powerful tool. In grounding terms, the appearance and behavior of others is one of the strongest taken-for-granted assumptions in face-to-face conversations; it automatically meets the criteria of being mutually and recursively understood. We may not necessarily be able to parse its symbolic content, but it is clearly a part of someone's appearance and an automatic part of common ground. 
 
@@ -302,9 +336,5 @@ In hindsight, this conflict is essentially irresolvable barring wide-spread educ
 Understanding attention in virtual worlds is tremendously difficult. A conversational participant is not simply attentive or not, attention is something that we use a variety of signals to communicate to others. These signals are almost entirely absent in \emph{Second Life}. Although an avatar's position does suggest the likely view of that user, it is possible for that user's camera to be looking somewhere else entirely. This makes it difficult to actively perform attention in the ways we do offline. Performing attention offline involves more than just gaze direction. It involves our entire bodies, our pose, and our face. These are difficult to control in \emph{Second Life}, which makes the performance of attention essentially intractable. In particular, the difference between attention and complete inaction is quite hard to distinguish. Avatars whose users have not touched the keyboard or mouse in quite some time will slouch, but that too is a mixed signal that may just as well represent rapt attention as inattention. Inattention is actually somewhat easier to communicate in the form of manic action. In much the same way it's difficult to imagine that an avatar running around the space is paying any attention. But this is a particularly extreme form of inattention, and more moderate forms of attention and inattention are quite difficult to express.
 
 The ramifications of this lack of expressivity for attention varies somewhat depending on the context. In discussion contexts, conversational participation is a decent (if very low frequency) proxy for attention. We would not expect completely inattentive participants to be able to produce credible contributions to a conversation. But again, a lack of participation is not reliably understood as inattention. These problems are exacerbated substantially in situations where most people are not expected to participate at all, as in a presentation context. Issues with presentations in a virtual world will be addressed in more depth in the next section.
-
-
-\section{Presentation Spaces}
-
 
 \section{Past and Future Virtuality}
