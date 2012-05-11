@@ -296,7 +296,19 @@ By making visible someone's constant attitude about something, meeting participa
 
 For many people, virtual worlds like \emph{Second Life} offered a chance to be part of a broader intellectual life that might not be available to them offline. Although it has faded somewhat, there was a period where lectures and presentations in \emph{Second Life} were reasonably common and provided a platform for people to find interesting social and intellectual contexts without leaving their house. In many ways, this was always the strongest argument for virtual worlds. While they ultimately had a difficult time competing with enterprise collaboration software, \emph{Second Life} in particular had a vibrant community around these sorts of events. Like meeting rooms, though, the spaces in which these events took place were overwhelmingly literal in their architecture. \sidenote{The only real concession to the virtuality of the environment was that each ``sim'' in \emph{Second Life} had a population limit, so the best event spaces were located on the corner where four sims met, to maximize the population. You can see across sim boundaries, but not talk.} The speaker typically gave a presentation either through streaming video or (later) used the in-world voice system. Slides were sometimes used, either in a video stream or embedded in the world and managed using in-world tools.
 
-In this section, I describe \emph{Presentation Spaces}---a system to support these sorts of presentation activities in a virtual world. I take as my starting place the set of challenges laid out by \citet{Yankelovich:2008vk} (with some adjustements):
+\begin{figure*}[t]
+	\includegraphics{figures/presentation_1.png}
+	\caption{A large amphitheater presentation space at the border of four adjacent sims, with a crowd milling around outside.}
+	\label{fig:amphitheater_presentation}
+\end{figure*}
+
+\begin{marginfigure}
+	\includegraphics{figures/presentation_2.png}
+	\caption{A presentation and discussion space in \emph{Second Life}}
+	\label{fig:circle_presentation}
+\end{marginfigure}
+
+In this section, I describe \emph{Presentation Spaces}---a system to support these sorts of presentation activities in a virtual world. I take as my starting place the set of challenges laid out by \citet{Yankelovich:2008vk} (with some adjustments):
 
 \begin{description}
 \item[Static Presenters]{Managing your avatar in a way that's convincing and demonstrates engagement while also handling the usual challenges of presenting is difficult.}
@@ -314,9 +326,45 @@ This system was built on the \emph{Wonderland} platform \citep{Kaplan:2011en} or
 
 \subsection{Design}
 
-\subsection{Analysis}
+\emph{Presentation Spaces} has four major components: slide spreader, a moving platform, chat zones, and thought bubbles. A new presentation space is created by dropping a PDF into a \emph{Wonderland} world. Slides can be spread in a variety of different ways, and the size and spacing of the slides is controllable. The slides form the backbone of the space, giving it its dominant visual feature. By making all the slides in the presentation immediately visible to all audience members, it becomes instantly clear how long the presentation is going to be and gives an avatar at a certain point in the presentation a sense of context about recent and future slides in a natural way. This sort of use of space is not feasible in \emph{Second Life}, where land is sold by the square meter and this sort of use of space would be extraordinarily indulgent. \sidenote{This is one of the many ways that design decisions about a world can have a major impact on architectural and social practices; builders in \emph{Second Life} frequently build tall instead of wide to manage real estate prices, which exacerbates people's issues navigating and moving in complicated three dimensional spaces with weak camera controls.}
 
-% not even sure what to say here since there was basically no testing.
+The implicit model with this sort of layout is that the presenter and audience will move from slide to slide over the course of the presentation. Instead of the audience staying stationary and slides changing in front of them, it is the slides that stay stationary and the audience which moves. Think of it like a gallery tour, instead of a slideshow. One of the challenges with organizing a presentation space in this way is the increased navigational burden on audience members. If every slide change required the entire audience to move itself from slide to slide, it would turn changing the slide into an elaborate procedure. You would, however, always know who was present and paying attention because inattentive viewers would rapidly be left behind as the group moves on. But in an experience that is already demanding quite a bit of extra attention from both audience member and presenter, this would likely be overwhelming. 
+
+\begin{marginfigure}
+	\includegraphics{figures/pdf-spreader.png}
+	\caption{A view of the space after dropping a PDF into a \emph{Wonderland} world. HUD controls in the bottom right corner control various settings.}
+	\label{fig:pdf_spreader}
+\end{marginfigure}
+
+
+To help automate the movement process, there is a sliding platform that can move audience members from slide to slide. The platform is controlled by the presenter, so functionally it works just like changing slides. \sidenote{We could, of course, move the slides and keep the audience stationary. This is analogous to the camera/document distinction in \emph{Pad++} \citep{Bederson:1998vo}. In this case, the disconcerting effect of moving graphically enormous and solid slides is a strong reason to move the audience instead. Furthermore, moving the slides would make it harder to move among the slides when not on the platform---the slides could move out from under you in a moment.} Audience members on the platform will move naturally from slide to slide, maintaining their view of the current slide, with a glimpse of the next and previous slides. The presenter maintains her perspective too, using an automatic custom camera angle that maintains a view of the audience and of the current, next, and previous slides. Audience members can freely move on and off the platform to more closely inspect past or future slides, or simply to signal that they've stepped away from their computers for a moment as in the border area in \emph{Information Spaces}. 
+
+\begin{figure*}[t]
+	\includegraphics{figures/presentation_screenshot.png}
+	\caption{Slides spread out in a space with the platform positioned near the end of the slideshow. Current audience members are standing on the platform watching the presentation. Presentation tools are available in the HUD in the upper right hand corner.}
+	\label{fig:presentation_overview}
+\end{figure*}
+
+One of the benefits of face-to-face interaction is the ability to carefully moderate your own speaking volume to easily address groups of different sizes. Being able to whisper to a friend sitting next to you at a talk is part of what motivates us to attend events together and sit together. In virtual spaces, this flexibility is difficult to foster. Chat is often spatialized (e.g. people near you can see your chat message, but people farther away cannot), but it's quite difficult to have any intuition about whether someone will be able to hear you or not just looking at their relative position. In physical spaces this is mitigated by being able to \emph{see} that someone is talking but not be able to hear them. This helps us make judgements about the audience for our own spoken comments. \emph{ChatCircles} handled this quite elegantly by representing speaking activity of others at a distance without making the actual content of the communication available. \citep{Viegas:1999kv}
+
+In \emph{Presentation Spaces}, we take a cue from \emph{ChatCircles}, but because of some limitations of the system we render the that ``chat circles'' in a much more literal fashion: as actual circles that avatars can step into and out of. This mimics an approach first seen in the game world \emph{Puzzle Pirates}, shown in Figure \ref{fig:pp_chat_circles}. Using a button on the \emph{Presentation Spaces} HUD interface (seen in the upper right hand corner of Figure \ref{fig:presentation_overview}), any user can create a chat zone underneath their avatar. A new chat zone starts small, but increases its radius whenever anyone walks into it. All zones are public, and can be arranged hierarchically (e.g. zones within zones) or in a disjoint fashion (e.g. partially overlapping). Stepping into a chat zone adds a new zone-specific chat channel to the main chat system. Stepping out of a zone doesn't remove the tab, but it does remove your ability to listen to new messages sent to that group since you left it.
+
+\begin{marginfigure}
+	\includegraphics{figures/chat-zones.png}
+	\caption{A two-person chat zone. The chat takes place in the chat window in the upper left. Note the distinction between the ``Group Chat'' and ``Global Chat'' tabs. Group chat tabs are automatically added when you enter a new chat zone.}
+	\label{fig:chat_zones}
+\end{marginfigure}
+
+This sort of interaction is possible without relying on a spatial organization. A simple instant messenger-like experience with invite-only group chat makes it possible to functionally group people and route chat messages in the same way. But this approach suffers from discoverability problems: how can you tell what conversations are going on if they take place invisibly? By linking the distribution of messages to a spatial property like avatars' positions, we make the existence of side conversations visible and discoverable. Using position also organizes the audience in a more sensible way. Instead of avatar position in the audience being arbitrary, an audience using chat zones will be a more legible social space with chat zone boundaries illustrating the broad strokes of relationships in the audience. 
+
+
+\begin{marginfigure}
+	\includegraphics{figures/pp_circles_chat.jpeg}
+	\caption{The \emph{Puzzle Pirates} implementation of a related system.}
+	\label{fig:pp_chat_circles}
+\end{marginfigure}
+
+Chat is a useful mechanism for small groups to interact, but it has two major limitations. It does not persist in a useful way (nor would you want it to, since chat messages are written for a particular audience, not for any who comes to the space later), and it is too high frequency for a presenter to keep track of. The thought bubbles system is a way to write messages explicitly to be left behind in a specific space. These messages can be thought of a little more like a tweet in \emph{Twitter} and less like an instant message or chat message. Binding them to a space is another way of using the slides to create contexts for conversation asynchronously. The spread out slides serve as a site for ongoing conversation, both synchronous through chat and asynchronous through thought bubbles. Because thought bubbles are composed in a different way than chat and are a lower-frequency channel, they also become a viable way for different chat zones to interact across zone boundaries as well as for the audience and presenter to interact. Although not fully fleshed out, there's the potential for systems like \emph{backchan.nl} (described in Chapter \ref{ch:backchanl}) to be re-invented in a virtual world context using spatiality and motion to convey the audience's activity in a more dynamic way.
 
 
 \section{Grounding, Actions, and Attention}
