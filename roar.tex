@@ -6,12 +6,66 @@
 The projects described thus far: \emph{Information Spaces}, \emph{Presentation Spaces}, \emph{backchan.nl}, and \emph{Tin Can} are all interested in supporting audiences who are not merely passive receivers of information, but active participants in an experience. My interest in non-verbal actions as a design technique is the main way I accomplish this. This is an important and effective strategy because verbal participation becomes more challenging as the number of potential participants grows. As discussed in Chapter \ref{ch:intro}, the constraint that only one person can talk at a time and the switching costs with synchronous verbal communication impose stiff costs on the engagement level of a group as that group size increases. I have sought in my designs to alleviate these costs by creating other ways to participate that don't have the constraint of seriality, which in turn frees us from the costs of negotiating turn-taking. I have shown the various ways this can create experiences where people feel more engaged with the process, more connected to the audience, and feel like they have an impact on group process in ways that traditional ``being there'' approaches to mediated interaction have trouble providing.
 
 
-Still, these approaches have limits. As audiences scale up beyond a few hundred (in the case of the largest \emph{backchan.nl} events we've observed), the design approaches we've proposed start to break down. With \emph{backchan.nl} specifically, the first failure mode is that the ``recent'' posts section becomes overwhelmed and hard to keep track of. This causes many users to simply opt out of voting on new posts because they appear faster than they can practically judge them. Larger audiences also bring increased odds of abusive behavior like spamming and mass-voting for low-quality posts. One common approach to handling increasingly large groups is to segment them into manageable chunks where our traditional techniques work well. This works, but it's a bit of a dodge. This chapter will argue that there are ways to simultaneously create compelling small-scale experiences that provide synchronous text-based interaction (e.g. chat) while also providing a series of mechanisms that help a very large group stay aware of each other's moods and interests and engage in various forms of collective activity that make it feel like you're really part of a very large audience.
+Still, these approaches have limits. As audiences scale up beyond a few hundred (in the case of the largest \emph{backchan.nl} events we've observed), the design approaches we've proposed start to break down.\sidenote{This is not specific to mediated interactions; interactions between unmediated communities change dramatically as the size of the community goes up, too. \citep{dunbar_number}} With \emph{backchan.nl} specifically, the first failure mode is that the ``recent'' posts section becomes overwhelmed and hard to keep track of. This causes many users to simply opt out of voting on new posts because they appear faster than they can practically judge them. Larger audiences also bring increased odds of abusive behavior like spamming and mass-voting for low-quality posts. One common approach to handling increasingly large groups is to segment them into manageable chunks where our traditional techniques work well. \sidenote{Often this segmentation happens for technical reasons as much as social reasons. Maintaining a sense of presence in a mediated group tends to be an $N_2$ scaling problem. The scaling factor is particularly brutal for virtual worlds which tend to have problems even rendering large numbers of avatars, let alone managing the communication problems of letting them interact. This has let many systems simply avoid the problems of large scale interaction because they were technically unrealistic.} This works, but it's a bit of a dodge. This chapter will argue that there are ways to simultaneously create compelling small-scale experiences that provide synchronous text-based interaction (e.g. chat) while also providing a series of mechanisms that help a very large group stay aware of each other's moods and interests and engage in various forms of collective activity that make it feel like you're really part of a very large audience. Thinking about mediated crowds in this way brings up compelling conceptual questions like: 
+
+\begin{enumeration}
+\item{How do people find groups of people to talk with?}
+\item{Do collective activities like chanting or doing the wave have online crowd analogs?}
+\item{How do you manage antisocial behavior in online crowds?}
+\item{How can you create opportunities for deeper engagement with the event that have an impact on other audience members' experiences?}
+\end{enumeration}
+
+Constructing a sense of remote viewership is not a new activity. As radio, film, and television broke down removed the physical constraints of audiences and performers being co-located, we were able to create enormous audiences all experiencing something together. Yet there was clearly something important about the presence of the audience. We still go to movie theaters to watch movies together, and TV shows frequently have live audiences (or simulate live audiences with a laugh track) to try to foster a sense of experiencing something with someone else.
+
+Over time, the structure of these events has even evolved to take advantage of technology to create a sense of engagement and involvement. Shows like \emph{American Idol} use text messages to allow audiences to vote for specific contestants. This is a relatively thin form of engagement: feedback is quite delayed, votes are essentially anonymous, and the pool of votes is huge which makes it hard to feel like you're making a difference. Nevertheless, this is part of a long-term campaign on the part of broadcasters to try to make it fee like broadcast television isn't simply receiving data, but trying to bring back the historical experience of being in a crowd with other viewers.
+
+In this chapter, I will describe a system called \emph{ROAR} that tries to develop the design techniques described and studied in past chapters towards audiences of extremely large scale. I will talk about related work in the social TV space as well as discuss the other sorts of tools that people use to create similar sorts of experiences. Finally I will describe the major components of ROAR's design: sections, pulse, shouts, and feedback. 
+
+Unlike the main projects in this thesis, \emph{backchan.nl} and \emph{Tin Can}, I have not done any deployments of \emph{ROAR}. This is primarily for practical reasons. It is quite difficult to reach audiences of the sizes for which \emph{ROAR}'s design is specialized. Organizations with audiences of this size tend not to be interested in trying prototype code during a large scale event. Still, these sorts of explorations can provide valuable guidance about a design space that we might otherwise overlook because it is prohibitively difficult to deploy prototype code. As a capstone to a series of more elaborately studied systems, I view this chapter as a forward-looking description of future work that can show how the principles developed in earlier chapters could grow to address the needs and interests of larger public audiences.
 
 
 
-% mention dunbar, other things?
-Size of a collaborative group has always represented a major design challenge. 
+on co-located audiences, broadcasters discovered the challenges of 
+
+made it technically possible to assemble remote audiences, we were left 
 
 
-By giving participants lightweight ways to engage in the discourse around some shared experience, more people can become involved and feel like they're part of 
+The transition from co-located audience to remote audience was an uncomfortable one. As audiences 
+
+
+Broadcast media like radio and television created the modern audience. More than any of the other technologies described in this thesis, only broadcast media have created truly enormous simultaneous audiences. Broadcasting live events broke down the physical constraints involved in creating a space that could support large local audiences. It became possible to share at least a portion of the experience of watching something live while being at a distance. 
+
+% talk about how spaces evolved to support the remote audience. cameras as the eyes of the masses. remove viewers giving experience meaning. shift to small ``studio'' audiences. the laughtrack and roar of the crowd to give meaning to the remote experience. simulating an audience.
+
+% trace history of how events evolved to become better aware of the remote audience? incresed value of space in the remote visual field (e.g. advertising that shows on screen only, not in the physical space - provides local addressing). 
+
+
+
+% topics in a random order (for now)
+% scaling non-verbal actions (distribution approaches, viral spread mechanics, etc)
+% creating small scale interactive groups
+% 	can put the twitter arguments here - why having bounded audiences is good + how to discover those audiences
+% synthesizing interaction
+% 	talk about the chat visualization systems.
+% 
+% how to organize this chapter?
+% 	one model is to march through a series of designs and talk about the evolution. In this model we would do:
+%	original trending words view
+%	first prototype
+%	second prototype visualizations
+%	final version
+%
+% the challenge is a lot of the pieces are more conceptual and don't necessarily "exist" in any of these prototypes. shouts and questions and votes and betting are all good examples of that. this is an argument for laying out the basic strategies in a conceptual way and then moving through the concrete prototypes with those in mind. Treat the prototypes as instantiations of those visions and just say "oh, this is what changed". 
+
+% so final strategy is:
+%	introduce the field
+%	talk about the history of audiences (maybe, this isn't my strong point)
+%	talk related work (put the why not twitter, why not facebook section here)
+%	set out the values here
+%	series of modular approaches: sections, pulse, shout, voting/betting, 
+%   future directions (representations in the physical arena, creating new streams of content, tumblr-like engagement, etc)
+
+
+
+
+
