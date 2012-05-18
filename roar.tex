@@ -6,7 +6,7 @@
 The projects described thus far: \emph{Information Spaces}, \emph{Presentation Spaces}, \emph{backchan.nl}, and \emph{Tin Can} are all interested in supporting audiences who are not merely passive receivers of information, but active participants in an experience. My interest in non-verbal actions as a design technique is the main way I accomplish this. This is an important and effective strategy because verbal participation becomes more challenging as the number of potential participants grows. As discussed in Chapter \ref{ch:intro}, the constraint that only one person can talk at a time and the switching costs with synchronous verbal communication impose stiff costs on the engagement level of a group as that group size increases. I have sought in my designs to alleviate these costs by creating other ways to participate that don't have the constraint of seriality, which in turn frees us from the costs of negotiating turn-taking. I have shown the various ways this can create experiences where people feel more engaged with the process, more connected to the audience, and feel like they have an impact on group process in ways that traditional ``being there'' approaches to mediated interaction have trouble providing.
 
 
-Still, these approaches have limits. As audiences scale up beyond a few hundred (in the case of the largest \emph{backchan.nl} events we've observed), the design approaches we've proposed start to break down.\sidenote{This is not specific to mediated interactions; interactions between unmediated communities change dramatically as the size of the community goes up, too. \citep{dunbar_number}} With \emph{backchan.nl} specifically, the first failure mode is that the ``recent'' posts section becomes overwhelmed and hard to keep track of. This causes many users to simply opt out of voting on new posts because they appear faster than they can practically judge them. Larger audiences also bring increased odds of abusive behavior like spamming and mass-voting for low-quality posts. One common approach to handling increasingly large groups is to segment them into manageable chunks where our traditional techniques work well. \sidenote{Often this segmentation happens for technical reasons as much as social reasons. Maintaining a sense of presence in a mediated group tends to be an $N_2$ scaling problem. The scaling factor is particularly brutal for virtual worlds which tend to have problems even rendering large numbers of avatars, let alone managing the communication problems of letting them interact. This has let many systems simply avoid the problems of large scale interaction because they were technically unrealistic.} This works, but it's a bit of a dodge. This chapter will argue that there are ways to simultaneously create compelling small-scale experiences that provide synchronous text-based interaction (e.g. chat) while also providing a series of mechanisms that help a very large group stay aware of each other's moods and interests and engage in various forms of collective activity that make it feel like you're really part of a very large audience. Thinking about mediated crowds in this way brings up compelling conceptual questions like: 
+Still, these approaches have limits. As audiences scale up beyond a few hundred (in the case of the largest \emph{backchan.nl} events we've observed), the design approaches we've proposed start to break down.\sidenote{This is not specific to mediated interactions; interactions between unmediated communities change dramatically as the size of the community goes up, too. \citep{dunbar_number}} With \emph{backchan.nl} specifically, the first failure mode is that the ``recent'' posts section becomes overwhelmed and hard to keep track of. This causes many users to simply opt out of voting on new posts because they appear faster than they can practically judge them. Larger audiences also bring increased odds of abusive behavior like spamming and mass-voting for low-quality posts. One common approach to handling increasingly large groups is to segment them into manageable chunks where our traditional techniques work well. \sidenote{Often this segmentation happens for technical reasons as much as social reasons. Maintaining a sense of presence in a mediated group tends to be an $N^2$ scaling problem. The scaling factor is particularly brutal for virtual worlds which tend to have problems even rendering large numbers of avatars, let alone managing the communication problems of letting them interact. This has let many systems simply avoid the problems of large scale interaction because they were technically unrealistic.} This works, but it's a bit of a dodge. This chapter will argue that there are ways to simultaneously create compelling small-scale experiences that provide synchronous text-based interaction (e.g. chat) while also providing a series of mechanisms that help a very large group stay aware of each other's moods and interests and engage in various forms of collective activity that make it feel like you're really part of a very large audience. Thinking about mediated crowds in this way brings up compelling conceptual questions like: 
 
 \begin{enumerate}
 \item{How do people find groups of people to talk with?}
@@ -70,6 +70,7 @@ Unlike the main projects in this thesis, \emph{backchan.nl} and \emph{Tin Can}, 
 % really need to do at least a cursory walk through the CHI/CSCW literature on social tv stuff. I know frank did stuff like this back in the day.
 %
 % A Visual Backchannel for Large-Scale Events
+% get andrea's bibliography and pull from there
 
 \subsection{Alternatives}
 
@@ -81,7 +82,7 @@ The nominal solution for this is hashtags, e.g. words prefixed with a ``\#'' cha
 
 The problem of an audience for tweets with a hashtag is compounded because tweets with a hashtag do have one guaranteed audience: your existing followers. Every tweet, hashtagged or not, is inserted in the streams of all your followers. When balancing a potential imagined audience and a guaranteed one, people will write for the audience they know they have. For major events like the Superbowl or World Cup, we can safely assume that our audience is likely to contain many people who are watching the same event. But even for moderately less popular events, it is far more likely that most of our followers are not co-watching and are unlikely to be deeply interested in a detailed conversation about what's happening. 
 
-We can see that this is true by looking at the sorts of tweets that people write during live events like conferences. \citet{Ebner:2010tx} try to categorize conference tweets into four categories: irrelevant tweets, administrative tweets, topical discussions, and topical tweets. The distinction between the latter two categories seems to be whether a tweet contains an ``@'' reply or not. The authors argue that without external information like a link or picture, a tweet is too decontextualized to be valuable to a non-attendee. I see their data differently. If we look at their exemplar topical tweets (excluding questions, whose audience is clearly the presenter), most of them are clearly written for an audience that does \emph{not} share their context.  For example, the tweet ``nice idea of @estudyskills Aggregation of all student weblogs at Tumblelog - gives overview. #ec10hh'' is recording the content of a talk for someone who isn't there. A simple evaluation-oriented tweet like this for a co-present audience would look a lot more like ``nice idea of @estudyskills'' and leave off the rest of the context. Indeed, this is the core difference between chat messages and posts to \emph{Twitter} or \emph{Facebook}: chat messages rarely make sense out of context, but posts are nearly always written with context included to make them comprehensible to a non-present audience. 
+We can see that this is true by looking at the sorts of tweets that people write during live events like conferences. \citet{Ebner:2010tx} try to categorize conference tweets into four categories: irrelevant tweets, administrative tweets, topical discussions, and topical tweets. The distinction between the latter two categories seems to be whether a tweet contains an ``@'' reply or not. The authors argue that without external information like a link or picture, a tweet is too decontextualized to be valuable to a non-attendee. I see their data differently. If we look at their exemplar topical tweets (excluding questions, whose audience is clearly the presenter), most of them are clearly written for an audience that does \emph{not} share their context.  For example, the tweet ``nice idea of @estudyskills Aggregation of all student weblogs at Tumblelog - gives overview. \#ec10hh'' is recording the content of a talk for someone who isn't there. A simple evaluation-oriented tweet like this for a co-present audience would look a lot more like ``nice idea of @estudyskills'' and leave off the rest of the context. Indeed, this is the core difference between chat messages and posts to \emph{Twitter} or \emph{Facebook}: chat messages rarely make sense out of context, but posts are nearly always written with context included to make them comprehensible to a non-present audience. 
 
 % do an informal analysis of tweets for the latest ML talks event. categorize into announcements, quotes, other https://twitter.com/#!/search/realtime/mltalks
 
@@ -89,9 +90,7 @@ While looking at how people write tweets versus chat messages is interesting, vo
 
 % put in a screenshot of the blue fin data page
 
-Although we don't have data for people using a system like \emph{ROAR} yet, we can look to comparable experiences that already exist. Many sports fans use platforms like Internet Relay Chat to talk about live events. Based on logs collected over the course of two weeks, we can calculate a metric similar to that reported by Bluefin Labs for conversations on \emph{Twitter}. We can't easily link specific messages to specific events, but we can measure how many messages each person sends per hour in which they send any messages at all; essentially for people who are chatting in a given window, how many messages do they send? This approximates the tweets per unique author per show metric. 
-
-This measure varies pretty substantially between which chat room you collect data from. Data is reported in Table \ref{tab:chat_message_rates}. 
+Although we don't have data for people using a system like \emph{ROAR} yet, we can look to comparable experiences that already exist. Many sports fans use platforms like Internet Relay Chat to talk about live events. Based on logs collected over the course of two weeks, we can calculate a metric similar to that reported by Bluefin Labs for conversations on \emph{Twitter}. We can't easily link specific messages to specific events, but we can measure how many messages each person sends per hour in which they send any messages at all; essentially for people who are chatting in a given window, how many messages do they send? This approximates the tweets per unique author per show metric. This measure varies pretty substantially between which chat room you collect data from. Data is reported in Table \ref{tab:chat_message_rates}. 
 
 
 % channel name
@@ -102,13 +101,13 @@ This measure varies pretty substantially between which chat room you collect dat
 % comments
 
 \begin{table*}[tb]
-\begin{tabular}{r|cccccl}
+\begin{tabular}{r|lllll}
 \textbf{Channel} & \textbf{Total Messages} & \textbf{Total Users} & \textbf{Mean Hourly Active Users} & \textbf{Mean  Messages Per Active User-Hour} \\
 
 \#reddit-soccer & 20,317 & 251 & 7.9 (SD=9.9) & 16.6 (SD=25.5) \\
 \#football & 11,936 & 199 & 8.8 (SD=8.2) & 10.1 (SD=11.8) \\
-\#teamliquid & 110,910 & 1940 & 29.7 (SD=19.2) & 9.5 (SD=18.1) \\
-\#joindota & 93,010 & 9022 & 52.8 (SD=113.3) & 3.4 (SD=9.6) \\
+\#teamliquid & 110,910 & 1,940 & 29.7 (SD=19.2) & 9.5 (SD=18.1) \\
+\#joindota & 93,010 & 9,022 & 52.8 (SD=113.3) & 3.4 (SD=9.6) \\
 	
 \end{tabular}
 \label{tab:chat_message_rates}
@@ -134,5 +133,20 @@ This informal analysis underlines both the strong differences in behavior in pos
 % put a screenshot of the discover interface in here in
 
 
+
+\section{Design}
+
+\emph{ROAR} is a social platform that wraps streaming video of a live event.
+
+\subsection{Sections}
+
+I take the organizing metaphor of a ``section'' from the physical experience of being in a crowd at, for instance, a sporting arena. Audience members rarely come to a stadium alone: most people come with friends. Existing tools for watching live events with chat tend to simply group all viewers into one anonymous mass. As I argued in the previous section, this approach tends to depress overall participation because too much chat can crowd out deeper and broader conversations. In contrast, \emph{ROAR} organizes viewers into many  smaller sections. Each section can be named or unnamed. 
+
+When a viewer joins a \emph{ROAR}-enabled stream, they are provided with a section browser. If they log in with a \emph{Facebook} or \emph{Twitter} account, \emph{ROAR} can prioritize sections with friends in them. A draft of this interface is shown in Figure \ref{fig:roar_section_browser}. For viewers who don't want to log in with \emph{Facebook} or \emph{Twitter}, they can search for named rooms on a particular theme, like a school, employer, location, or team they're a fan of. 
+
+\emph{ROAR} wants to support this sort of experience easily
+
+
+For the sake of simplicity, I've focused on chat. Chat has a number of qualities relative to audio that are advantageous for this sort of experience: it requires minimal extra hardware, can be done in loud places, is more easily analyzable at large scales, doesn't require turn-taking, and requires substantially less technical infrastructure to support at scale. Still, audio is far more immersive and future versions of \emph{ROAR} might support it for sections below a certain size threshold where many of these issues are more manageable.
 
 
