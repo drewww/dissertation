@@ -8,12 +8,12 @@ The projects described thus far: \emph{Information Spaces}, \emph{Presentation S
 
 Still, these approaches have limits. As audiences scale up beyond a few hundred (in the case of the largest \emph{backchan.nl} events we've observed), the design approaches we've proposed start to break down.\sidenote{This is not specific to mediated interactions; interactions between unmediated communities change dramatically as the size of the community goes up, too. \citep{dunbar_number}} With \emph{backchan.nl} specifically, the first failure mode is that the ``recent'' posts section becomes overwhelmed and hard to keep track of. This causes many users to simply opt out of voting on new posts because they appear faster than they can practically judge them. Larger audiences also bring increased odds of abusive behavior like spamming and mass-voting for low-quality posts. One common approach to handling increasingly large groups is to segment them into manageable chunks where our traditional techniques work well. \sidenote{Often this segmentation happens for technical reasons as much as social reasons. Maintaining a sense of presence in a mediated group tends to be an $N_2$ scaling problem. The scaling factor is particularly brutal for virtual worlds which tend to have problems even rendering large numbers of avatars, let alone managing the communication problems of letting them interact. This has let many systems simply avoid the problems of large scale interaction because they were technically unrealistic.} This works, but it's a bit of a dodge. This chapter will argue that there are ways to simultaneously create compelling small-scale experiences that provide synchronous text-based interaction (e.g. chat) while also providing a series of mechanisms that help a very large group stay aware of each other's moods and interests and engage in various forms of collective activity that make it feel like you're really part of a very large audience. Thinking about mediated crowds in this way brings up compelling conceptual questions like: 
 
-\begin{enumeration}
+\begin{enumerate}
 \item{How do people find groups of people to talk with?}
 \item{Do collective activities like chanting or doing the wave have online crowd analogs?}
 \item{How do you manage antisocial behavior in online crowds?}
 \item{How can you create opportunities for deeper engagement with the event that have an impact on other audience members' experiences?}
-\end{enumeration}
+\end{enumerate}
 
 Constructing a sense of remote viewership is not a new activity. As radio, film, and television broke down removed the physical constraints of audiences and performers being co-located, we were able to create enormous audiences all experiencing something together. Yet there was clearly something important about the presence of the audience. We still go to movie theaters to watch movies together, and TV shows frequently have live audiences (or simulate live audiences with a laugh track) to try to foster a sense of experiencing something with someone else.
 
@@ -85,12 +85,39 @@ We can see that this is true by looking at the sorts of tweets that people write
 
 % do an informal analysis of tweets for the latest ML talks event. categorize into announcements, quotes, other https://twitter.com/#!/search/realtime/mltalks
 
-This informal analysis is complemented by summary data from Bluefin Labs, a company that captures and analyzes \emph{Twitter} conversations about TV shows. For each show they analyze, they report the total number of tweets about the show and the total number of people who tweeted about the show. The ratio of these two values is the average number of tweets per tweeter. For the vast majority of shows they track, this value is between $1$ and $2$; the average viewer tweets at most twice about a single show. This holds true even for sports matches that can last 2-3 hours. For people chatting about live events on IRC, 
+This informal analysis is complemented by summary data from Bluefin Labs, a company that captures and analyzes \emph{Twitter} conversations about TV shows. For each show they analyze, they report the total number of tweets about the show and the total number of people who tweeted about the show. The ratio of these two values is the average number of tweets per tweeter. For the vast majority of shows they track, this value is between $1$ and $2$; the average viewer tweets at most twice about a single show. This holds true even for sports matches that can last 2-3 hours. It is intuitive that only one or two messages per person is a strong indication that there is not significant conversation going on; conversations simply cannot take place in one or two messages. Nevertheless, it is useful to compare these participation patterns with a social context that looks more like \emph{ROAR} to argue for \emph{ROAR}'s design approach.
 
-% do this data collection off the IRC data we've got. 
+% put in a screenshot of the blue fin data page
+
+Although we don't have data for people using a system like \emph{ROAR} yet, we can look to comparable experiences that already exist. Many sports fans use platforms like Internet Relay Chat to talk about live events. Based on logs collected over the course of two weeks, we can calculate a metric similar to that reported by Bluefin Labs for conversations on \emph{Twitter}. We can't easily link specific messages to specific events, but we can measure how many messages each person sends per hour in which they send any messages at all; essentially for people who are chatting in a given window, how many messages do they send? This approximates the tweets per unique author per show metric. 
+
+This measure varies pretty substantially between which chat room you collect data from. Data is reported in Table \ref{tab:chat_message_rates}. 
 
 
+% channel name
+% average unique hourly users (average )
+% total messages  \sigma{msg}
+% total duration t_n - t_0
+% average messages per active user
+% comments
 
+\begin{table*}[tb]
+\begin{tabular}{r|cccccl}
+\textbf{Channel} & \textbf{Total Messages} & \textbf{Total Users} & \textbf{Mean Hourly Active Users} & \textbf{Mean  Messages Per Active User-Hour} \\
+
+\#reddit-soccer & 20317 & 251 & 7.9 (SD=9.9) & 16.6 (SD=25.5) \\
+\#football & 11936 & 199 & 8.8 (SD=8.2) & 10.1 (SD=11.8) \\
+\#teamliquid & 110910 & 1940 & 29.7 (SD=19.2) & 9.5 (SD=18.1) \\
+\#joindota & 93010 & 9022 & 52.8 (SD=113.3) & 3.4 (SD=9.6) \\
+	
+\end{tabular}
+\label{tab:chat_message_rates}
+\caption{Comparison of participation rates across different IRC chat rooms.}
+\end{table*}
+
+The most direct comparison to \emph{Twitter} is the final numeric column on the right. Mean messages per active user-hour represents the average number of chat message a user sends in hours where they send any messages at all. If every user logged on, sent one message, and then stayed silent, this metric would be 1. It would also be 1 if every user sent one message per hour. As a result, the floor of this metric (as with the tweets / unique author metric) is 1. Larger values represent users who tends to send many more messages during hours where they are chatting at all. This metric is artificially depressed relative to the \emph{Twitter} metric because our data covers not just moments when there are live events going on, but 24 hours a day. This is captured by the variance in the fifth column: the number of active chatters varies widely between active moments and inactive moments. Inactive moments don't exist in the \emph{Twitter} dataset because it focuses on only the tweets associated with a television show. Despite this, we see values ranging from 3.4 to 16.6, compared to \emph{Twitter}'s 1-2. This suggests that chat contexts elicit a 200-1600\% increase in per-active-user participation. 
+
+The large variance in participation rates seems (in this very preliminary review) to be correlated with the size of the rooms. The rooms with the highest per-user participation were also the rooms with the fewest active users. This supports the \emph{ROAR}'s core argument that smaller interaction contexts will be more interactive than larger undifferentiated contexts. This might also explain part of the difference between \emph{Twitter} and a chat-style system: \emph{Twitter} looks much more like a single large undifferentiated room than a focused small scale social space.
 
 
 
@@ -103,10 +130,6 @@ This informal analysis is complemented by summary data from Bluefin Labs, a comp
 
 % make a diagram of the alice/bob/charlie system
 % put a screenshot of the discover interface in here in
-
-On \emph{Facebook}, replies to posts slightly handle this problem. On the other hand, \emph{Facebook} posts aren't shown to all the people who subscribe to you, so it inhibits people's awareness of other conversations going on, even if you can see all of a conversation if you see it at all.} 
-
- If you can see 
 
 
 
