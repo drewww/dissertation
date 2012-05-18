@@ -21,19 +21,18 @@ Over time, the structure of these events has even evolved to take advantage of t
 
 In this chapter, I will describe a system called \emph{ROAR} that tries to develop the design techniques described and studied in past chapters towards audiences of extremely large scale. I will talk about related work in the social TV space as well as discuss the other sorts of tools that people use to create similar sorts of experiences. Finally I will describe the major components of ROAR's design: sections, pulse, shouts, and feedback. 
 
-Unlike the main projects in this thesis, \emph{backchan.nl} and \emph{Tin Can}, I have not done any deployments of \emph{ROAR}. This is primarily for practical reasons. It is quite difficult to reach audiences of the sizes for which \emph{ROAR}'s design is specialized. Organizations with audiences of this size tend not to be interested in trying prototype code during a large scale event. Still, these sorts of explorations can provide valuable guidance about a design space that we might otherwise overlook because it is prohibitively difficult to deploy prototype code. As a capstone to a series of more elaborately studied systems, I view this chapter as a forward-looking description of future work that can show how the principles developed in earlier chapters could grow to address the needs and interests of larger public audiences.
+Unlike the main projects in this thesis, \emph{backchan.nl} and \emph{Tin Can}, I have not done any deployments of \emph{ROAR}. This is primarily for practical reasons. It is quite difficult to reach audiences of the sizes for which \emph{ROAR}'s design is specialized. Organizations with audiences of this size tend not to be interested in trying prototype code during a large scale event. Still, these sorts of explorations can provide valuable guidance about a design space that we might otherwise overlook because it is prohibitively difficult to deploy prototype code. As a capstone to a series of more elaborately studied systems, I view this chapter as a forward-looking description of future work that can show how the principles developed in earlier chapters could grow to address the needs and interests of larger public audiences. The other major shift in this chapter is a desire to focus on experiences that are feasible now, not speculative experiences 
 
 
 
-on co-located audiences, broadcasters discovered the challenges of 
-
-made it technically possible to assemble remote audiences, we were left 
-
-
-The transition from co-located audience to remote audience was an uncomfortable one. As audiences 
-
-
-Broadcast media like radio and television created the modern audience. More than any of the other technologies described in this thesis, only broadcast media have created truly enormous simultaneous audiences. Broadcasting live events broke down the physical constraints involved in creating a space that could support large local audiences. It became possible to share at least a portion of the experience of watching something live while being at a distance. 
+% on co-located audiences, broadcasters discovered the challenges of 
+% 
+% made it technically possible to assemble remote audiences, we were left 
+% 
+% 
+% The transition from co-located audience to remote audience was an uncomfortable one. As audiences 
+% 
+% Broadcast media like radio and television created the modern audience. More than any of the other technologies described in this thesis, only broadcast media have created truly enormous simultaneous audiences. Broadcasting live events broke down the physical constraints involved in creating a space that could support large local audiences. It became possible to share at least a portion of the experience of watching something live while being at a distance. 
 
 % talk about how spaces evolved to support the remote audience. cameras as the eyes of the masses. remove viewers giving experience meaning. shift to small ``studio'' audiences. the laughtrack and roar of the crowd to give meaning to the remote experience. simulating an audience.
 
@@ -65,6 +64,49 @@ Broadcast media like radio and television created the modern audience. More than
 %	series of modular approaches: sections, pulse, shout, voting/betting, 
 %   future directions (representations in the physical arena, creating new streams of content, tumblr-like engagement, etc)
 
+
+\section{Related Work}
+
+% really need to do at least a cursory walk through the CHI/CSCW literature on social tv stuff. I know frank did stuff like this back in the day.
+%
+% A Visual Backchannel for Large-Scale Events
+
+\subsection{Alternatives}
+
+There is a widely-held assumption that interaction around live events like those that \emph{ROAR} aims to support are already taking place on existing social networks like \emph{Facebook} and \emph{Twitter}. If this were true, it would suggest a very different approach; one that looks much more like \emph{Visual Backchannel}. However, I will argue in this section that the social spaces created by \emph{Facebook} and \emph{Twitter} are not (and barring pretty fundamental changes to their mechanics can not become) spaces for truly interactive discussions about a live event.
+
+As I've argued about grounding elsewhere in this thesis, creating social situations with mutual awareness is critical to creating effective conversation spaces. If there is any concern that others can't see what you're saying, it breaks the cycle of awareness that is critical for moving a conversation forward. The publish/subscribe model adopted by and \emph{Twitter} gets in the way of this once conversations scale beyond just one person. If Bob follows Alice, and Charlie follows Alice but not Bob, Charlie will see only parts of a conversation that are not directed at Bob with an ``@'' reply. \sidenote{I'm going to mostly ignore \emph{Facebook} for the sake of simplifying the argument. The outlines of the argument are similar, but \emph{Facebook}'s more integrated reply format avoids some of these problems. But the lack of reliability of posts being seen by followers (as few as 20\% of your followers see any given post \citep{facebook_post_seen_freq}) adds another challenge to creating a grounded community.}
+
+The nominal solution for this is hashtags, e.g. words prefixed with a ``\#'' character. These mark a tweet as part of a larger set of tweets on a theme, and places that tweet in a stream in the so-called ``discover'' part of the interface. This interface has a similar grounding-inhibiting design. First, it is impossible to tell if others are actively viewing the hashtag in the ``discover'' mode. Whether or not that audience exists is essentially unknowable to posters. Hashtags are visible amongst follower networks (i.e. you can see hashtags that seem to be popular within your network and be involved in this conversations) but there is little evidence that participations cross existing follower/following relationships.
+
+The problem of an audience for tweets with a hashtag is compounded because tweets with a hashtag do have one guaranteed audience: your existing followers. Every tweet, hashtagged or not, is inserted in the streams of all your followers. When balancing a potential imagined audience and a guaranteed one, people will write for the audience they know they have. For major events like the Superbowl or World Cup, we can safely assume that our audience is likely to contain many people who are watching the same event. But even for moderately less popular events, it is far more likely that most of our followers are not co-watching and are unlikely to be deeply interested in a detailed conversation about what's happening. 
+
+We can see that this is true by looking at the sorts of tweets that people write to hashtags. We take as our 
+
+% do an informal analysis of tweets for the latest ML talks event. categorize into announcements, quotes, other https://twitter.com/#!/search/realtime/mltalks
+
+This informal analysis is complemented by summary data from Bluefin Labs, a company that captures and analyzes \emph{Twitter} conversations about TV shows. For each show they analyze, they report the total number of tweets about the show and the total number of people who tweeted about the show. The ratio of these two values is the average number of tweets per tweeter. For the vast majority of shows they track, this value is between $1$ and $2$; the average viewer tweets at most twice about a single show. This holds true even for sports matches that can last 2-3 hours. For people chatting about live events on IRC, 
+
+% do this data collection off the IRC data we've got. 
+
+
+
+
+
+
+
+% We can see th
+
+%The easiest way to understand that is does is exist would be getting a reply from someone who doesn't follow you who discovered your tweet via the ``discover'' tab. Although this is possible, a casual perusal of tweets involved in trending topics shows vanishingly few replies to other tweets; RTs are far more common. These impediments to mutual visibility 
+
+% would be interesting to make an empirical argument about how many @ replies are to people via hash tags. could try to do this by looking at @ that were replied to that were between people who don't follow each other and have used a hash tag in a period. that's a bit elaborate, though. 
+
+% make a diagram of the alice/bob/charlie system
+% put a screenshot of the discover interface in here in
+
+On \emph{Facebook}, replies to posts slightly handle this problem. On the other hand, \emph{Facebook} posts aren't shown to all the people who subscribe to you, so it inhibits people's awareness of other conversations going on, even if you can see all of a conversation if you see it at all.} 
+
+ If you can see 
 
 
 
