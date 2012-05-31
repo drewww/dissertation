@@ -77,14 +77,65 @@ With this shift towards larger and public audiences, I've also chosen to design 
 
 \section{Related Work}
 
-% really need to do at least a cursory walk through the CHI/CSCW literature on social tv stuff. I know frank did stuff like this back in the day.
-%
+In the academic literature, social interaction around television has been a research topic for years. As with the broad interest in CSCW systems work of building systems to support experiences that had historically been co-present, the focus of this research stream has been on recreating the experience of sitting around a television talking about what's on screen. This is the primary goal for essentially all of the systems discussed in this section. 
+
+There are a number of common threads across all the social TV systems discussed here:
+
+\begin{itemize}
+	\item Content is viewed on a television
+	\item The system is generalized, i.e. for essentially all kinds of TV content and supports awareness between programs
+	\item A buddy-list system provides awareness of others' TV experiences
+	\item Co-watching is conceived as an intimate, interactive experience between small groups
+	\item There is zero awareness of non-friends \sidenote{This is mostly an artifact of the research context. It's hard enough to arrange a group of 5-10 households in a social network willing to install and use the system, let alone a broader network of unconnected users. Few researchers would bet on the value of crowd interactions when assembling a crowd for experimental purposes is so challenging.}
+\end{itemize}
+	
+Where the systems tend to diverge is how exactly they try to create a sense of co-presence. The main distinction is the primary mode of interaction: symbolic, chat, or voice. In general, researchers agree that voice is a natural and effective way of promoting a sense of co-presence, but that voice has technical and environmental challenges to adoption. Chat can be effective for users who are used to chatting while doing other activities, but for unacclimated users it can be distracting and frustrating. \citep{compare.voice.tex} This finding is mitigated, though, by other researchers who found that when only chat is offered, users report having satisfying experiences. \citep{regan2004media} Symbolic interaction, like a ``thumbs up'' button or pre-canned messages alone are ``simply insufficient and too impersonal for fostering a feeling of connection.'' \citep{examiningpresence} This, too, is countered by  who find that marking ``positive'' and ``negative'' points in a video in an asynchronous viewing context was considered enjoyable. One interpretation of these conflicting findings is that \citet{compare.voice.tex} are less concerned with co-presence because of their interest in asynchronous viewing, so their research focus was not on whether or not people felt like they were watching with their friends, but was instead on simply whether or not they enjoyed marking up video.
+
+Most social TV work responds to the rise of digital video recorders in some way. For systems that are interested in creating a sense of co-presence, the wide-spread availability of devices to both pause shows in real time and record them completely for later viewing poses a major challenge. \emph{CollaboraTV} \citep{harrison2007collaboratv} addresses this most directly, making synchronous and asynchronous viewing essentially identical by providing only a limited vocabulary for interaction to avoid the expectation of actual between-viewer conversation. Other systems that do aspire to supporting synchronous co-present experiences typically make a nod towards potentially time shifting interactions for later viewing by friends.
+
+The final major axis of distinction is around the representation of viewers. \emph{Social TV}\citep{harboe2007perceptions}, \emph{Media Center Buddies}\citep{regan2004media}, and \emph{ConnecTV} \citep{boertjes2008connectv} all use buddy-list metaphors throughout the experience. Other systems like \emph{AmigoTV} \citep{coppens2004amigotv}, \emph{CollaboraTV} \citep{harrison2007collaboratv}, and \emph{Vision Television}\citep{vt} focus on using either real or iconic versions of faces to represent viewers. Most of these support ways of animating those avatars in ways that indicate an emotional state in response to the program.
+
+\emph{ROAR} sets itself apart from this past work in a number of ways. Due to technical constraints in the period when this work was most popular, almost all social TV systems used the TV screen as site of the user interface.\sidenote{The one notable exception is \citeapos{Fink:2006td} work, which also shares an interest in creating ``ad-hoc'' groups in a broadly-similar way that \emph{ROAR} constructs sections.} \emph{ROAR}'s focus on supporting interactions around video watched on a computer is a marked difference in approach that has a number of benefits: text input is easier, the interface can have finer details because of increased resolution and shorter viewing distances and multi-user scenarios are quite rare. This was, of course, an approach that was historically possible, but the recent availability of wide-spread access to streamed versions of live events has made this venue more viable. Furthermore, consensus seems to have emerged that interaction in a traditional TV context is going to be tablet and mobile phone centric, not taking place on the TV screen itself.
+
+The other most important difference between \emph{ROAR} and past social TV work is its interest in supporting awareness among all viewers, not just between viewers with a pre-existing relationship. There is some work in this space, like \emph{Visual Backchannel}\citep{Dork:2010fb} that focuses on providing reflective tools for analyzing and browsing through tweets with a particular hashtag. But there is little work in trying to build interfaces that merge participation with real-time shared visualization. The co-incidence of participation and visualization is a critical component to grounding, as discussed throughout this thesis. If the visualizations of group participation are not part of everyone's shared display, they lose value as a site for collective action - one of the main goals of \emph{ROAR}'s crowd visualizations.
+
+Although \emph{ROAR} is interested in co-presence, it aims to live in somewhat more ambiguous social settings where groups are made up not necessarily just of close friends (where voice might be comfortable) but with somewhat larger groups where 5-10 people might co-watch with different levels of engagement. Although voice is a richer experience, it has relatively hard limits in terms of numbers of active participants. Furthermore, voice tends to be a higher intimacy channel, which is less useful in contexts where not everyone necessarily knows everyone else. Thus to support co-presence, \emph{ROAR} focuses on chat and some other associated features like polls and drawing. This focus on co-presence precludes creating in any serious way an asynchronous version of \emph{ROAR}. Indeed, \citet{uses.socialTV} note that among some mixed results, the strongest experiences were in live events like sports. 
+
+
+
+
+% Motorola SocialTV work: underlines the need for free form messaging. ``lightweight messages alone were simply insufficient and too impersonal for fostering a feeling of connection''
+% 	features: buddy list, offline presence through ambient devices / chumby. invite to show, and simple symbolic messaging and pre-canned messages. \citep{examiningpresence}
+% 	
+% 	
+% review paper: series of general guidelines. weirdly prescriptive about what social tv is, but whatever. 
+% 
+% 
+% \citep{uses.socialTV} is a sort of depressing ``nothing works'' piece. notes that it's particularly good for sports
+% 
+% fink et al 2006 provides chat on a computer 
+% 
+% 
+% \citep{harrison2007collaboratv} has a nice system with an MST3K style silhouette at the bottom with thumbs up / down. compared it (sort of) to a chat system, with people preferring the avatar system
+% 
+% amigoTV \citep{coppens2004amigotv} heavily avatar-based , using avatar animation to communicate (plus all the usual presence notification work) voice and some text chat
+% 
+% \citep{regan2004media} text based, on screen. built into MSN. found people liked the chat experience 
+% 
+% \citep{abreu20022beon} another on-tv one with chat. basic outlines similar to roar - chat along bottom, something else on the right side. no eval.
+
+
+
 % A Visual Backchannel for Large-Scale Events
 % get andrea's bibliography and pull from there
 
-\subsection{Alternatives}
 
-There is a widely-held assumption that interaction around live events like those that \emph{ROAR} aims to support are already taking place on existing social networks like \emph{Facebook} and \emph{Twitter}. If this were true, it would suggest a very different approach; one that looks much more like \emph{Visual Backchannel}. However, I will argue in this section that the social spaces created by \emph{Facebook} and \emph{Twitter} are not (and barring pretty fundamental changes to their mechanics can not become) spaces for truly interactive discussions about a live event.
+
+
+
+\subsection{Other Conversational Tools}
+
+Social TV research has faded somewhat in popularity since the mid 2000's.  There is a widely-held assumption that conversations around live events are going on not in TV-specific interfaces like those built by researchers, but instead on existing social networks like \emph{Facebook} and \emph{Twitter}. In this model, when someone wishes to interact with friends or strangers watching the same event as them, they simply turn to existing social network channels. If this were true, it would suggest that \emph{ROAR}'s approach is deeply flawed, and instead our focus should be on building systems that use \emph{Facebook} or \emph{Twitter} as a substrate. This approach would look much more like \emph{Visual Backchannel}\citep{Dork:2010fb}. However, I will argue in this section that the social spaces created by \emph{Facebook} and \emph{Twitter} are not (and barring fundamental changes to their mechanics can not become) spaces for truly interactive discussions about a live event. Instead, we need a new platform to be the home for these conversations.
 
 As I've argued about grounding elsewhere in this thesis, creating social situations with mutual awareness is critical to creating effective conversation spaces. If there is any concern that others can't see what you're saying, it breaks the cycle of awareness that is critical for moving a conversation forward. The publish/subscribe model adopted by and \emph{Twitter} gets in the way of this once conversations scale beyond just one person. If Bob follows Alice, and Charlie follows Alice but not Bob, Charlie will see only parts of a conversation that are not directed at Bob with an ``@'' reply. \sidenote{I'm going to mostly ignore \emph{Facebook} for the sake of simplifying the argument. The outlines of the argument are similar, but \emph{Facebook}'s more integrated reply format avoids some of these problems. But the lack of reliability of posts being seen by followers (as few as 20\% of your followers see any given post \citep{facebook_post_seen_freq}) adds another challenge to creating a grounded community.}
 
