@@ -95,6 +95,57 @@ This equivalence may seem unlikely; why should we accept that systems used in co
 This dissertation is organized around a series of ``primary'' contexts for which I design a particular complementary communication system that enhances the overall experience. Metrics and evaluation strategies vary for each of these pieces, but each project shares a deep interest in trying to fill in the gaps of the ``primary'' interaction space by using the particular strengths of less ``rich'' mediated communication channels. The goal of these interventions is to create environments where people have ways to express themselves non-verbally in addition to whatever existing communication channels exist, often audio, sometimes visual. By adding mediated communication channels to other existing channels, we can focus each channel on its primary affordances and let it do what it does best while letting the complementary communication channels fill in the gaps.
 
 
+\section{From Channel To Stage}
+
+Platforms for discussion and commenting that are outside official discourse channels have widely been referred to as ``backchannels.''  Backchannels, traditionally defined, create a space where audience members to some ``front channel'' can share information with each other, typically about the content of the front channel. \sidenote{This is in contrast with the traditional technical use of ``backchannel'', which refers to the verbal and non-verbal cues that non-speaker give a speaker during a conversation. In this usage, backchannel was a type of communication, not an actual dedicated distinct channel the way it is in this context.} This metaphor is an apt description of much of the prior work in this space, like \citep{Cogdill:2001fp,Yardi:2006uk,mccarthy_digital_2004,Rekimoto:1998jy}. I have found, however, that it is not as useful for understanding the systems I will present in this thesis. Instead of using channels, I will argue for ``stages,'' and instead of a front/back separation, I will shift to a main/side distinction. 
+
+
+In a traditional backchannel configuration, audience members can view the two channels but are only legitimate participants in the backchannel. Presenters, on the other hand, often have a very hard time staying aware of backchannel content if they are aware of it at all. This asymmetry gives the backchannel its outsider flavor and can lead to snarky and disrespectful content \citep{boyd:Yo36SNyj}. This is widely recognized as a major problem with backchannels. In this way, the front/back distinction is an accurate description of existing systems, but not a situation we should seek to recreate in future systems. Mitigating this sense of separation is a major design goal in my work.
+
+
+
+
+% In this configuration, the front/back channel distinction is a useful one because in a very practical sense the backchannel is usually somewhat covert or hidden and participants in the backchannel rarely have the ability or opportunity to communicate on the front channel. \sidenote{This paragraph and the rest of this section are largely from \citep{Harry:2012df}.} 
+
+% I wonder if it's worth putting some examples here? I thiiink we can get away without, but might help ground people's thinking.
+
+% Although this front/back channel metaphor works in situations where audience members have no access to the front channel, it is less effective in situations where the backchannel is intended to influence the front channel. 
+
+% As will be discussed in the related work, much recent work is focused on bridging these front and back spaces and I argue through the work presented in this thesis that a new metaphor is useful for understanding how these parallel communication spaces can be configured.
+
+To enable this shift, we need to re-imagine the nature of social interaction in these sorts of spaces. A channel metaphor implies a clear split between those empowered to broadcast, and an audience who receives a broadcast. It also has implications for how attention is managed; channels imply a model of binary attention. To find an alternative, I turn to \citet{goffman_presentation_1959} for his description of \emph{stages} to illuminate this new sort of situation. He uses the example of a waiter behaving politely with a problematic customer and then walking into the kitchen and complaining to the cook about the customer's difficult behavior. Each interaction is performative and represents the waiters' competence at performing his role appropriately for different audiences in a different setting. In the waiter example, these audiences are disjointed, and the door into the kitchen represents a gateway between the ``front'' performance space with customers and the ``back'' performance space among restaurant staff. The notion of stages shifts our attention from spaces where a small number of people can broadcast information to many recipients (like a lecture hall or conference) and instead focuses on negotiated sites of performance like the restaurant dining room and kitchen, where people can perform different aspects of their identity for different audiences.
+
+This notion of stages is a useful metaphor to replace channels. Unlike channels, which are organized around a small group of broadcasters and a large group of receivers, stages recognize the potential for shifting sets of performers while simultaneously recognizing the site-specific nature of the performance. A stages metaphor also more actively recognizes the way that audiences to a performance are themselves constantly performing in small ways, while a channel metaphor limits the audience to simply receiving a broadcast. This comprises both small performances and the potential for substantial performances. In a large lecture hall, the nature of the individual performance is not that precise. If there is an open laptop policy, audience members might be checking their email or engaging in an official backchannel.  They are able to, as Goffman says, ``get away with going away," because the act of \emph{going away} is an expected part of the front stage performance. But a shift from channels to stages is important in recognizing that even as audience members, even looking at a laptop screen instead of the teacher is a sort of small performance. Furthermore, a student may raise their hand and ask a question of the teacher, thus assuming a larger role in the main stage. 
+
+Although Goffman's description of appropriate performances for a specific audience is valuable, we want to avoid that front-back distinction in the restaurant. Instead of having separate audiences, we want to create a space where, although the modes of performance are different, the performances are available to everyone. While in a channel metaphor, audiences are split between channels and the back channel is largely unavailable to someone performing on the front channel, stages create the opportunity for situations where the audiences for each stage can be shared. By unifying the audiences, we can help avoid the problem with backchannels where they tend to assume a covert character. If side stage participation is accessible to everyone, it becomes socially problematic to be critical or mean to performers on the main stage because those performances are visible to everyone.
+
+To reiterate, this change in metaphor has two components: a shift from front/back to main/side, and a shift from channels to stages. This is an aspirational shift; most of the design work in this space to date has represented the backchannel approach. But if these systems are to be an effective addition to hybrid communication experiences in the future, I believe we need to design towards a new metaphor that focuses on unifying audiences and providing complementary communication options rather than supporting distinct channels.
+
+
+% Each is a performance, but the backstage is presumably more authentic. So unlike the concept of channels, which are composed of discreet information streams, stages are negotiated sites of performance around a singular situation.
+
+% Instead of the metaphor of channel, he would refer to these alternate communication streams as stages.  When one moves from formal interactions to less formal interactions, one moves from front to back stage. When on the front stage, performance is prescribed and specific roles can be rigid.  And when on the back stage, one is more free to authentically represent themselves and their thoughts about the front stage.  He uses the example of a waiter behaving one way with a customer and then walking into the kitchen and telling the cook about the customer's difficult behavior.  Each is a performance, but the backstage is presumably more authentic. So unlike the concept of channels, which are composed of discreet information streams, stages are negotiated sites of performance around a singular situation. 
+
+
+
+
+
+
+% This shift from 
+% 
+% 
+%  But in a seminar environment, attentiveness and participation are more scrutinized because of the size and nature of the group. This suggests that integrating new communication technology into groups of smaller size might be more challenging because \emph{going away} is more difficult to politely incorporate into the front stage performance.  
+% 
+% 
+% Communication systems used in a context where they are not the primary communication channel have historically been referred to as ``backchannel'' communication systems. Chat-oriented systems were the most popular, and have been deployed in a variety of contexts, though research has often focused on  conferences \citep{mccarthy_digital_2004, Rekimoto:1998jy} and classrooms \citep{Cogdill:2001fp,Yardi:2006uk} as fertile spaces for these sorts of interventions. More recently, tools like \emph{Twitter} have been described as a ``backchannel'' for live events. In some cases, a live-updating feed of recent tweets containing certain event-specific keywords have been projected in the space.
+% 
+% Although my work seems at first glance to fall into this same category of backchannel designs, I argue that a shift in the categories we use to think about these systems is important for building effective spaces. 
+% 
+% 
+% 
+% 
+% In the literature about mediated communication systems used in a context where they are not the primary channel
+
  % Need to introduce stages as a concept here! Do the whole backchannel -> side stage transition argument here? It has to happen somewhere and it has to happen EARLY. It doesn't happen anywhere in background yet. 
 
 
