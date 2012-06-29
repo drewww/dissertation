@@ -464,7 +464,7 @@
 %%
 % Turn off section numbering
 
-\setcounter{secnumdepth}{-1}
+% \setcounter{secnumdepth}{-1}
 
 %%
 % Tighten up space between displays (e.g., a figure or table) and make symmetric
@@ -1524,12 +1524,12 @@
 % Make Tuftian-style section headings and TOC formatting
 
 \titleformat{\chapter}%
-  [display]% shape
-  {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
-  {\itshape\huge\thechapter}% label
-  {0pt}% horizontal separation between label and title body
-  {\huge\rmfamily\itshape}% before the title body
-  [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
+  [hang]% shape
+  {\normalfont\huge\itshape}% format applied to label+text
+  {\thechapter}% label
+  {1em}% horizontal separation between label and title body
+  {}% before the title body
+  []% after the title body 
 
 \titleformat{\section}%
   [hang]% shape
