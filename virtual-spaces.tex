@@ -214,7 +214,7 @@ Finally, the floor of the agree/disagree field displays the current average vote
 
 \begin{figure*}[t]
 	\includegraphics{figures/average+history.png}
-	\caption{Displays of average voting. Left: A view of the floor of the agree/disagree space with a line showing the current average vote. Right: In the space above the meeting room, long bars float slowly up to represent the history of the average vote over time.}
+	\caption{Left: A view of the floor with a line showing the current average vote. Right: In the space above the meeting room, long bars float slowly up to represent the history of the average vote over time.}
 	\label{fig:information_space_average_history}
 \end{figure*}
 
@@ -251,7 +251,7 @@ In a virtual space where avatars can easily act at a distance, the dashboard sta
 
 \begin{figure*}[tp]
 	\includegraphics{figures/dashboard.png}
-	\caption{The dashboard that controls features of the space. Left: A button for making new todo objects. Center: Toggle switches for different visualization features. Right: Buttons for changing the floor design.}
+	\caption{The dashboard. Left: A button for making new todo objects. Right: Buttons for configuring the space..}
 	\label{fig:information_space_dashboard}
 \end{figure*}
 
@@ -343,20 +343,19 @@ This system was built on the \emph{Wonderland} platform \citep{Kaplan:2011en} or
 
 The implicit model with this sort of layout is that the presenter and audience will move from slide to slide over the course of the presentation. Instead of the audience staying stationary and slides changing in front of them, it is the slides that stay stationary and the audience which moves. Think of it like a gallery tour, instead of a slideshow. One of the challenges with organizing a presentation space in this way is the increased navigational burden on audience members. If every slide change required the entire audience to move itself from slide to slide, it would turn changing the slide into an elaborate procedure. You would, however, always know who was present and paying attention because inattentive viewers would rapidly be left behind as the group moves on. But in an experience that is already demanding quite a bit of extra attention from both audience member and presenter, this would likely be overwhelming. 
 
-\begin{marginfigure}
-	\includegraphics{figures/pdf-spreader.png}
-	\caption{A view of the space after dropping a PDF into a \emph{Wonderland} world. HUD controls in the bottom right corner control various settings.}
-	\label{fig:pdf_spreader}
-\end{marginfigure}
-
-
-To help automate the movement process, there is a sliding platform that can move audience members from slide to slide. The platform is controlled by the presenter, so functionally it works just like changing slides. \sidenote{We could, of course, move the slides and keep the audience stationary. This is analogous to the camera/document distinction in \emph{Pad++} \citep{Bederson:1998vo}. In this case, the disconcerting effect of moving graphically enormous and solid slides is a strong reason to move the audience instead. Furthermore, moving the slides would make it harder to move among the slides when not on the platform---the slides could move out from under you in a moment.} Audience members on the platform will move naturally from slide to slide, maintaining their view of the current slide, with a glimpse of the next and previous slides. The presenter maintains her perspective too, using an automatic custom camera angle that maintains a view of the audience and of the current, next, and previous slides. Audience members can freely move on and off the platform to more closely inspect past or future slides, or simply to signal that they've stepped away from their computers for a moment as in the border area in \emph{Information Spaces}. 
+To help automate the movement process, there is a sliding platform that can move audience members from slide to slide. The platform is controlled by the presenter, so functionally it works just like changing slides. \sidenote[][-1.5in]{We could, of course, move the slides and keep the audience stationary. This is analogous to the camera/document distinction in \emph{Pad++} \citep{Bederson:1998vo}. In this case, the disconcerting effect of moving graphically enormous and solid slides is a strong reason to move the audience instead. Furthermore, moving the slides would make it harder to move among the slides when not on the platform---the slides could move out from under you in a moment.} Audience members on the platform will move naturally from slide to slide, maintaining their view of the current slide, with a glimpse of the next and previous slides. The presenter maintains her perspective too, using an automatic custom camera angle that maintains a view of the audience and of the current, next, and previous slides. Audience members can freely move on and off the platform to more closely inspect past or future slides, or simply to signal that they've stepped away from their computers for a moment as in the border area in \emph{Information Spaces}. 
 
 \begin{figure*}[t]
 	\includegraphics{figures/presentation_screenshot.png}
 	\caption{Slides spread out in a space with the platform positioned near the end of the slideshow. Current audience members are standing on the platform watching the presentation. Presentation tools are available in the HUD in the upper right hand corner.}
 	\label{fig:presentation_overview}
 \end{figure*}
+
+\begin{marginfigure}[1.0in]
+	\includegraphics{figures/pdf-spreader.png}
+	\caption{A view of the space after dropping a PDF into a \emph{Wonderland} world. HUD controls in the bottom right corner control various settings.}
+	\label{fig:pdf_spreader}
+\end{marginfigure}
 
 One of the benefits of face-to-face interaction is the ability to carefully moderate your own speaking volume to easily address groups of different sizes. Being able to whisper to a friend sitting next to you at a talk is part of what motivates us to attend events together and sit together. In virtual spaces, this flexibility is difficult to foster. Chat is often spatialized (e.g. people near you can see your chat message, but people farther away cannot), but it's quite difficult to have any intuition about whether someone will be able to hear you or not just looking at their relative position. In physical spaces this is mitigated by being able to \emph{see} that someone is talking but not be able to hear them. This helps us make judgements about the audience for our own spoken comments. \emph{ChatCircles} handled this quite elegantly by representing speaking activity of others at a distance without making the actual content of the communication available. \citep{Viegas:1999kv}
 
