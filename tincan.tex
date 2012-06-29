@@ -178,7 +178,7 @@ The ideas pane contains a time-sorted list of ideas. An idea is simply a text co
 \subsection{Users}
 Each user logged in to the system is displayed on a tab around the edge of the screen. The arrangement is essentially random. Tapping a user extends that user's idea drawer. This drawer contains all ideas created by the user, whether shared or not. These ideas are differentiated in the list by ``(shared)" being appended to ideas that have been shared. Any unshared idea in the idea drawer can be dragged from the drawer to the group idea area, even if the user didn't originally author the idea. Ideas dragged by other people are attributed differently in the main timeline. For example, an idea created by Alice and shared by Bob would say ``(Alice, shared by Bob)". By design, personal folders are not private.  They are semi-public spaces meant to give users some choice in how their contributions are read by the group.
 
-\begin{figure*}[t]
+\begin{figure*}[p]
 \centering
 \includegraphics{figures/tincan/archive.png}
 \caption{A screenshot of the post-class archive.}
@@ -211,6 +211,21 @@ In the results section to follow we will analyze the kinds of content entered in
 
 \section{Process Traces}
 
+\begin{figure*}[p]
+\centering
+\includegraphics{figures/tincan/ideas_per_participant.pdf}
+\caption{Distribution of ideas per participant per idea type: personal, promoted, and shared.}
+\label{f:ideas_per_participant}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\includegraphics{figures/tincan/timeline.pdf}
+\caption{Timeline of topics and ideas posted in two example class sessions. Ideas posted by students are in black, ideas from the professor are in red. The height of the line indicates the length (in characters) of the idea. Topic names are shown above their corresponding section of the class.}
+\label{f:class_timelines}
+\end{figure*}
+
+
 Over the course of the deployment of \emph{Tin Can}, 839 ideas and 119 topics were created. The  majority of ideas created were shared: $72\%$ of ideas were shared on creation. Another $5\%$ were private ideas that were turned into public ideas by being dragged by another user from a users' personal idea drawer to the public idea area. The balance, $23\%$ of ideas, were never shared. The distribution of these different idea types on a per participant basis can be found in figure \ref{f:ideas_per_participant}. 
 
 Over the course of the study, 119 topics were created in total. Of these, 79 were actually discussed and the remainder were raised as potential topics but never actually used. The average class had 6.5 started topics, with a standard deviation of 2.3. Topic duration had a much wider variation: the average topic lasted 851 seconds with a deviation of 673 seconds. This is skewed largely because of very short topics. 
@@ -220,12 +235,6 @@ A deep analysis of temporal patterns within the data is beyond the scope of this
 % REVISON I don't think we need this. In what follows, we present some summary statistics of topic and idea use during class, discuss some of its temporal properties, and describe a rough set of categories that capture the diversity and relative frequency of student ideas in \emph{Tin Can}.
 
 
-\begin{figure*}[t]
-\centering
-\includegraphics{figures/tincan/ideas_per_participant.pdf}
-\caption{Distribution of ideas per participant per idea type: personal, promoted, and shared.}
-\label{f:ideas_per_participant}
-\end{figure*}
 
 
 
@@ -252,12 +261,6 @@ Much of the existing literature on backchannels focuses on situations in which t
 
 As described in Chapter \ref{ch:background}, attention is best understood as a socially situated performative behavior. In a lecture, attentiveness is typically demonstrated by looking at the presenter and potentially taking notes. In a small group discussion, attentiveness might be expanded to include looking through class reading material or looking at other people. 
 
-\begin{figure*}[t]
-\centering
-\includegraphics{figures/tincan/timeline.pdf}
-\caption{Timeline of topics and ideas posted in two example class sessions. Ideas posted by students are in black, ideas from the professor are in red. The height of the line indicates the length (in characters) of the idea. Topic names are shown above their corresponding section of the class.}
-\label{f:class_timelines}
-\end{figure*}
 
 Traditional approaches to managing attention in education tend to take as their starting point the desire to maximize audience attention on the presenter through the physical architecture of lecture spaces, presentation media, and rhetorical strategies. \citet{Gordon:2009us} argue that attention and distraction are best understood as being ``hand-in-hand. The very same new technologies and landscapes that cultivate a state of distraction are themselves directed simultaneously toward the cultivation of attention.'' Educators tend to look to technology (broadly construed) to help manage overwhelming sensory inputs while simultaneously blaming the lack of attention of students on that same technology.
 
