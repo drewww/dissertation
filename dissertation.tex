@@ -2,10 +2,10 @@
 \hypersetup{colorlinks}
 
 \usepackage{amsmath}
+\usepackage{pdfpages}
 
 % Set up the images/graphics package
 \usepackage{graphicx}
-\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
 \graphicspath{{graphics/}}
 
 % \title{Understanding Grounding, Actions, and Attention in Complementary Communication Systems}
@@ -80,7 +80,8 @@
 	
 \frontmatter
 
-\maketitle
+\includepdf[pages=-, noautoscale=true]{frontmatter}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
 
 \tableofcontents
 
