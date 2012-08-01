@@ -79,11 +79,18 @@ The continued focus on ``being there'' designs by much of the communication indu
 \section{Complementary Communication}
 This thesis addresses the design space of complementary communication systems. By this, I mean systems that aim to create a communication context shared by a group of people who are sharing some kind of experience like a presentation, performance, or discussion. Viewed this way, complementary communication systems are as old as whispering to someone sitting next to you or passing notes to a classmate. The addition of powerful personal communication technology to our everyday interactions have increased the opportunities we have to create complementary communication contexts as well as radically increased the reach a complementary communication system might have. In this context, how should we think about these sorts of systems? What goals should we have for them? In what contexts do they make sense? In particular, how should we think about the relationship between a complementary communication system in a face to face context? Is complementing a face to face interaction the same as complementing a mediated interaction?
 
+
+In their famous paper, \citet{Hollan:1992tz} introduce the ``beyond being there'' approach. They argue that seeking to recreate the experience of ``being there'' was in a way an abdication of our responsibility as designers that left an important design space un-explored. In particular, they urge us to think less about ways to minimize the experience of mediation in communication, but to look instead for ways that mediation can add value to interactions. To take this perspective seriously, we need to shift away from a view of face-to-face interaction as being always better than interactions mediated by technology and instead think critically about potential limitations and challenges with face-to-face interaction and potential benefits that mediation can offer. 
+
 \begin{marginfigure}
 	\includegraphics{figures/whisper.png}
 	\caption{The original complementary communication experience.}
 	\label{fig:whisper}
 \end{marginfigure}
+
+
+Although Hollan and Stornetta focus on creating mediated experiences that rival or surpass face-to-face experiences, in my work I show that we don't have to choose one approach or the other. If we accept the argument that being face to face is not \emph{a priori} the best experience, the strategy I employ is to add complementary communication platforms that can be used simultaneously with face-to-face communication or mediated platforms that mimic face to face interaction.
+
 
 \begin{marginfigure}
 	\includegraphics{figures/note-passing.png}
@@ -91,17 +98,15 @@ This thesis addresses the design space of complementary communication systems. B
 	\label{fig:notes}
 \end{marginfigure}
 
+
+This easy equivalence between face-to-face communication and mediated imitations may seem unlikely; why should we accept that systems used in coordination with audio or video conferencing would be similar to those used to coordinate face-to-face? I will argue that a system that can effectively complement face-to-face interaction when its users could simply set it aside and rely on the (presumed superior) affordances of unfettered verbal communication likely has something to tell us about both design and face-to-face interaction more generally. If these systems can provide value in face-to-face contexts, I will show that they also provide value (perhaps even more value) when used to complement systems that seek to create experiences \emph{like} being face-to-face. Furthermore, true ``distributed'' situations are becoming less common. Heterogenous configurations where some people are co-located and others are remote and possibly alone are becoming more common. In these contexts, a system that doesn't operate effectively between co-located users is unlikely to be broadly useful, and would suffer from the disenfranchising effects we see for people who ``dial in'' to a local meeting. Thinking broadly about systems that complement both face-to-face and audio/video sharing will more efficiently lead us to systems effective in both contexts than treating them as separate cases.
+
 \begin{marginfigure}
 	\includegraphics{figures/texting.png}
 	\caption{Person to person text messaging extends the reach of something like note passing to include anyone with a phone. Phones also support multi-party conversations, increasing the size of the audience for complementary communication systems.}
 	\label{fig:texting}
 \end{marginfigure}
 
-In their famous paper, \citet{Hollan:1992tz} introduce the ``beyond being there'' approach. They argue that seeking to recreate the experience of ``being there'' was in a way an abdication of our responsibility as designers that left an important design space un-explored. In particular, they urge us to think less about ways to minimize the experience of mediation in communication, but to look instead for ways that mediation can add value to interactions. To take this perspective seriously, we need to shift away from a view of face-to-face interaction as being always better than interactions mediated by technology and instead think critically about potential limitations and challenges with face-to-face interaction and potential benefits that mediation can offer. 
-
-Although Hollan and Stornetta focus on creating mediated experiences that rival or surpass face-to-face experiences, in my work I show that we don't have to choose one approach or the other. If we accept the argument that being face to face is not \emph{a priori} the best experience, the strategy I employ is to add complementary communication platforms that can be used simultaneously with face-to-face communication or mediated platforms that mimic face to face interaction.
-
-This easy equivalence between face-to-face communication and mediated imitations may seem unlikely; why should we accept that systems used in coordination with audio or video conferencing would be similar to those used to coordinate face-to-face? I will argue that a system that can effectively complement face-to-face interaction when its users could simply set it aside and rely on the (presumed superior) affordances of unfettered verbal communication likely has something to tell us about both design and face-to-face interaction more generally. If these systems can provide value in face-to-face contexts, I will show that they also provide value (perhaps even more value) when used to complement systems that seek to create experiences \emph{like} being face-to-face. Furthermore, true ``distributed'' situations are becoming less common. Heterogenous configurations where some people are co-located and others are remote and possibly alone are becoming more common. In these contexts, a system that doesn't operate effectively between co-located users is unlikely to be broadly useful, and would suffer from the disenfranchising effects we see for people who ``dial in'' to a local meeting. Thinking broadly about systems that complement both face-to-face and audio/video sharing will more efficiently lead us to systems effective in both contexts than treating them as separate cases.
 
 
 
@@ -120,27 +125,10 @@ This dissertation is organized around a series of ``primary'' contexts for which
 Platforms for discussion and commenting that are outside official discourse channels have widely been referred to as ``backchannels.''  Backchannels, traditionally defined, create a space where audience members to some ``front channel'' can share information with each other, typically about the content of the front channel. \sidenote{This is in contrast with the traditional technical use of ``backchannel'', which refers to the verbal and non-verbal cues that non-speaker give a speaker during a conversation. In this usage, backchannel was a type of communication, not an actual dedicated distinct channel the way it is in this context.} This metaphor is an apt description of much of the prior work in this space, like \citep{Cogdill:2001fp,Yardi:2006uk,mccarthy_digital_2004,Rekimoto:1998jy}. I have found, however, that it is not as useful for understanding the systems I will present in this thesis. Instead of using channels, I will argue for ``stages,'' and instead of a front/back separation, I will shift to a main/side distinction. \sidenote{Parts of the section to follow are adapted from \citep{Harry:2012df}.}
 
 
-In a traditional backchannel configuration, audience members can view the two channels but are only legitimate participants in the backchannel. Presenters, on the other hand, often have a very hard time staying aware of backchannel content if they are aware of it at all. This asymmetry gives the backchannel its outsider flavor and can lead to disrespectful and unproductive content \citep{boyd:Yo36SNyj}. This is widely recognized as a major problem with backchannels. In this way, the front/back distinction is an accurate description of existing systems, but not a situation I seek to recreate. \sidenote{Of course, there may be contexts where the front/back distinction is valuable. But since that is the predominant structure for existing tools, there are many more options for supporting that approach so I don't give it much attention in this thesis.} Mitigating this sense of separation is a major design goal in my work.
+In a traditional backchannel configuration (represented in Figure \ref{fig:front-back-channel}), audience members can view the front channel and have a variety of backchannels available to them, each with different sized audiences and affordances. Presenters, on the other hand, often have a very hard time staying aware of backchannel content if they are aware of it at all. This asymmetry gives the backchannel its outsider flavor and can lead to disrespectful and unproductive content \citep{boyd:Yo36SNyj}. This is widely recognized as a major problem with backchannels. In this way, the front/back distinction is an accurate description of existing systems, but not a situation I seek to recreate. \sidenote{Of course, there may be contexts where the front/back distinction is valuable. But since that is the predominant structure for existing tools, there are many more options for supporting that approach so I don't give it much attention in this thesis.} Mitigating this sense of separation is a major design goal in my work.
 
 
-\begin{marginfigure}
-	\includegraphics{figures/front-back-channel.png}
-	\caption{The conceptual model inherent in a front/back channel configuration.}
-	\label{fig:front-back-channel}
-\end{marginfigure}
 
-
-\begin{marginfigure}
-	\includegraphics{figures/front-stage-back-stage.png}
-	\caption{The transition from channels to stages; brings the audience closer to the performer and increases the visibility of the back stage.}
-	\label{fig:front-back-stage}
-\end{marginfigure}
-
-\begin{marginfigure}
-	\includegraphics{figures/main-side-final.png}
-	\caption{The final conceptual model that I argue for. Main and side stage are well blended and can influence each other. Main stage and side stage share an audience.}
-	\label{fig:main-side-stage}
-\end{marginfigure}
 
 
 % In this configuration, the front/back channel distinction is a useful one because in a very practical sense the backchannel is usually somewhat covert or hidden and participants in the backchannel rarely have the ability or opportunity to communicate on the front channel. \sidenote{This paragraph and the rest of this section are largely from \citep{Harry:2012df}.} 
@@ -151,13 +139,35 @@ In a traditional backchannel configuration, audience members can view the two ch
 
 % As will be discussed in the related work, much recent work is focused on bridging these front and back spaces and I argue through the work presented in this thesis that a new metaphor is useful for understanding how these parallel communication spaces can be configured.
 
-To enable this shift, we need to re-imagine the nature of social interaction in these sorts of spaces. A channel metaphor implies a clear split between those empowered to broadcast, and an audience who receives a broadcast. It also has implications for how attention is managed; channels imply a model of binary attention. To find an alternative, I turn to \citet{goffman_presentation_1959} for his description of \emph{stages} to illuminate this new sort of situation. He uses the example of a waiter behaving politely with a problematic customer and then walking into the kitchen and complaining to the cook about the customer's difficult behavior. Each interaction is performative and represents the waiters' competence at performing his role appropriately for different audiences in a different setting. In the waiter example, these audiences are disjointed, and the door into the kitchen represents a gateway between the ``front'' performance space with customers and the ``back'' performance space among restaurant staff. The notion of stages shifts our attention from spaces where a small number of people can broadcast information to many recipients (like a lecture hall or conference) and instead focuses on negotiated sites of performance like the restaurant dining room and kitchen, where people can perform different aspects of their identity for different audiences.
+To enable this shift, we need to re-imagine the nature of social interaction in these sorts of spaces. A channel metaphor implies a clear split between those empowered to broadcast, and an audience who receives a broadcast. It also has implications for how attention is managed; channels imply a model of binary attention. To find an alternative, I turn to \citet{goffman_presentation_1959} for his description of \emph{stages} to illuminate this new sort of situation. He uses the example of a waiter behaving politely with a problematic customer and then walking into the kitchen and complaining to the cook about the customer's difficult behavior. Each interaction is performative and represents the waiters' competence at performing his role appropriately for different audiences in a different setting. In the waiter example, these audiences are disjointed, and the door into the kitchen represents a gateway between the ``front'' performance space with customers and the ``back'' performance space among restaurant staff. The notion of stages shifts our attention from spaces where a small number of people can broadcast information to many recipients (like a lecture hall or conference) and instead focuses on negotiated sites of performance like the restaurant dining room and kitchen, where people can perform different aspects of their identity for different audiences. This transition is shown in Figure \ref{fig:front-back-stage}
+
+
+\begin{marginfigure}
+	\includegraphics{figures/front-back-channel.png}
+	\caption{The conceptual model inherent in a front/back channel configuration.}
+	\label{fig:front-back-channel}
+\end{marginfigure}
+
+
+
+\begin{marginfigure}
+	\includegraphics{figures/front-stage-back-stage.png}
+	\caption{The transition from channels to stages; brings the audience closer to the performer and increases the visibility of the back stage.}
+	\label{fig:front-back-stage}
+\end{marginfigure}
 
 This notion of stages is a useful metaphor to replace channels. Unlike channels, where audiences are basically invisible to the performer, stages bring the audience and performer together and create a context in which they become mutually aware of each other. Stages also shift from the notion of a small group of broadcasters and a large group of receivers, to a context where there is the potential for shifting sets of performers. The notion of stages also more actively recognizes the way that audiences to a performance are themselves constantly performing in small ways, while a channel metaphor limits the audience to simply receiving a broadcast. This comprises both small performances and the potential for substantial performances. In a large lecture hall, the nature of the individual performance is not that precise. If there is an open laptop policy, audience members might be checking their email or engaging in an official backchannel.  They are able to, as Goffman says, ``get away with going away," because the act of \emph{going away} is an expected part of the front stage performance. But a shift from channels to stages is important in recognizing that even as audience members, looking at a laptop screen instead of the teacher is a sort of small performance. Furthermore, a student may raise their hand and ask a question of the teacher, thus assuming a larger role in the main stage. 
 
+\begin{marginfigure}
+	\includegraphics{figures/main-side-final.png}
+	\caption{The final conceptual model that I argue for. Main and side stage are well blended and can influence each other. Main stage and side stage share an audience.}
+	\label{fig:main-side-stage}
+\end{marginfigure}
+
+
 Although Goffman's description of appropriate performances for a specific audience is valuable, we want to avoid that front-back distinction enacted in the restaurant. Instead of having separate audiences, we want to create a space where, although the modes of performance are different, the performances are available to everyone. While in a channel metaphor, audiences are split between channels and the back channel is largely unavailable to someone performing on the front channel, stages create the opportunity for situations where the audiences for each stage can be shared. By unifying the audiences, we can help avoid the problem with backchannels where they tend to assume a covert character. If side stage participation is accessible to everyone, it changes the character of the communication.
 
-To reiterate, this change in metaphor has two components: a shift from channels to stages, and a shift from front/back to main/side. This is an aspirational shift; most of the design work in this space to date has represented the backchannel approach. But if these systems are to be an effective addition to face-to-face-type experiences, I will show how adopting this new metaphor can create effective communication experiences that encompass multiple simultaneous opportunities for engagement that create an effective, unified experience.
+To reiterate, this change in metaphor has two components: a shift from channels to stages, and a shift from front/back to main/side. This is an aspirational shift; most of the design work in this space to date has represented the backchannel approach. But if these systems are to be an effective addition to face-to-face-type experiences, I will show how adopting this new metaphor can create effective communication experiences that encompass multiple simultaneous opportunities for engagement that create an effective, unified experience. This final configuration is shown in Figure \ref{fig:main-side-stage}
 
 % Each is a performance, but the backstage is presumably more authentic. So unlike the concept of channels, which are composed of discreet information streams, stages are negotiated sites of performance around a singular situation.
 
