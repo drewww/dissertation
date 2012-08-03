@@ -43,6 +43,12 @@ Backchan.nl is a web-based system for posting text items (nominally questions, b
 	\label{fig:backchannl_physical}
 \end{figure*}
 
+
+\begin{marginfigure}
+	\includegraphics{figures/backchannl/backchannl-space-foe.png}
+	\caption{A \emph{backchan.nl} setup in an a different auditorium. }
+\end{marginfigure}
+
 Although the public displays show the top eight posts, the web interface maintains a chronological listing of all the posts that have been submitted during the session. As posts receive positive votes, they tend to rise in the ranking and will eventually reach the top eight and are projected on the main screen. The web interface from which votes are cast and items are submitted can be seen in Figure \ref{fig:backchannl_screenshot}.
 
 When a user first loads the site, they are asked to identify themselves with a name and affiliation. This information is included with any posts that a user made. Votes are publicly anonymous, but are tracked internally with the voter's name to prevent multiple-voting. Identity is easily changed and no formal account registration system is included. The implications of how identity is handled in this system are discussed later in the paper. 
@@ -152,7 +158,13 @@ Presenters were also concerned that questions would be posted to \emph{backchan.
 
 \subsection{Replies}
 
-Many users lamented the lack of an explicit reply structure in \emph{backchan.nl}. Audience members frequently made explicit comparisons between \emph{backchan.nl} and services like Twitter and IRC, which both have been used in conference situations to provide backchannel conversation. In some deployments these conversations took place over \emph{backchan.nl} itself and became quite contentious. The core complaint in most instances had to do with the lack of a way to distinguish the timing of posts or to indicate that a post was a response to an earlier posting. Some users tried to adopt the ``@username'' format of Twitter, but often these posts would get voted into the top eight without the post it was replying to, decontextualizing the response and confusing audience members who weren't using the tool on a laptop. Over the course of an event, users have almost always moved beyond their initial attempts to use \emph{backchan.nl} in ways it wasn't designed for and settle into a pattern of posting items that aren't explicitly intended to generate responses from the audience. 
+Many users lamented the lack of an explicit reply structure in \emph{backchan.nl}. Audience members frequently made explicit comparisons between \emph{backchan.nl} and services like Twitter and IRC, which both have been used in conference situations to provide backchannel conversation. Figure \ref{fig:twitter_backchannel} shows a common configuration from a Media Lab event. In some deployments these conversations took place over \emph{backchan.nl} itself and became quite contentious. The core complaint in most instances had to do with the lack of a way to distinguish the timing of posts or to indicate that a post was a response to an earlier posting. Some users tried to adopt the ``@username'' format of Twitter, but often these posts would get voted into the top eight without the post it was replying to, decontextualizing the response and confusing audience members who weren't using the tool on a laptop. Over the course of an event, users have almost always moved beyond their initial attempts to use \emph{backchan.nl} in ways it wasn't designed for and settle into a pattern of posting items that aren't explicitly intended to generate responses from the audience. 
+
+\begin{marginfigure}
+	\includegraphics{figures/twitter-background.png}
+	\caption{A projection of tweets from a \emph{Twitter} hashtag, behind the presenter.}
+	\label{fig:twitter_backchannel}
+\end{marginfigure}
 
 In future versions, we would be interested in better affording responses. From a design perspective, we find integrating replies a challenging and interesting problem. Given our limited projection screen space and the contextual nature of discussions, we're hesitant to display elaborate conversations on the screen. Although filtering moderation systems like Slashdot's have been shown to be appreciated by users \citep{Ratto:2003vs}, we have a non-interactive, low density group display and would have to make a global decision for all users about what threshold is appropriate.
 
